@@ -1,0 +1,12 @@
+# Mac finder artifacts
+.DS_Store
+
+# Sublime Text project files
+*.sublime-project
+*.sublime-workspace
+
+# Local files
+*.build
+
+# SASS
+.sass-cache
