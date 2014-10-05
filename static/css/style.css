@@ -1,0 +1,79 @@
+/* =Variables
+ ************************************ */
+/* =Dimensions
+ **************** */
+/* =Colors
+ **************** */
+/* =Mixins
+ ************************************ */
+/* =@2x converter
+ **************** */
+/* =Transition
+ **************** */
+/* =Border radius
+ **************** */
+/* =Font-size
+ **************** */
+/* =Animations
+ **************** */
+/* =Reset
+ ************************************ */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
+  display: block; }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 none; }
+
+ul {
+  list-style: none; }
+
+button, textarea, input {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+/* =Base
+ ************************************ */
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 160%;
+  vertical-align: baseline;
+  color: #0d0a11;
+  background: white;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+a {
+  cursor: pointer;
+  color: #0d0a11;
+  text-decoration: underline;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.25s ease-out; }
+
+.center {
+  text-align: center; }
+
+hr {
+  margin: 100px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1); }
+
+/* =Layout
+ ************************************ */
+/* =Containers
+ **************** */
+.container {
+  max-width: 1020px;
+  margin: 0 auto; }
+
+/* =Typography
+ ************************************ */
+h1, h2, h3, h4 {
+  font-weight: 200; }

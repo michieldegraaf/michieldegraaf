@@ -1,0 +1,63 @@
+/* =Mixins
+ *************************************/
+
+/* =@2x converter
+ *****************/
+
+=at2x($image_name, $w: auto, $h: auto, $extention: '.png')
+  background:
+    image: url(/images/$image_name + $extention)
+    repeat: no-repeat
+    position: center center
+  $x2img : $image_name + '@2x' + $extention
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5)
+    background:
+      image: url(/images/$x2img)
+      size: $w $h
+
+/* =Transition
+ *****************/
+
+=transition($properties: all, $duration: .25s, $easing: ease-out)
+  @if length($properties) > 1
+    transition-property: $properties
+    transition-duration: $duration
+    transition-timing-function: $easing
+  @else
+    transition: $properties $duration $easing
+
+/* =Border radius
+ *****************/
+
+=border-radius($value)
+  -webkit-border-radius: $value
+  -moz-border-radius: $value
+  border-radius: $value
+
+/* =Font-size
+ *****************/
+
+=font-size($value)
+  font-size: ($value / 16) + em
+
+/* =Animations
+ *****************/
+
+=animate($name, $time, $loop, $effect)
+  -webkit-animation: $name $time $loop $effect
+  -moz-animation: $name $time $loop $effect
+  -ms-animation: $name $time $loop $effect
+  animation: $name $time $loop $effect
+
+=animation-duration($time)
+  -webkit-animation-duration: $time
+  -moz-animation-duration: $time
+  -ms-animation-duration: $time
+  animation-duration: $time
+
+=animation-delay($time)
+  -webkit-animation-delay: $time
+  -moz-animation-delay: $time
+  -ms-animation-delay: $time
+  animation-delay: $time
