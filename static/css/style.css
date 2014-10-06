@@ -37,10 +37,21 @@ button, textarea, input {
   -moz-box-shadow: none;
   box-shadow: none; }
 
+/* =Typography
+ ************************************ */
+@font-face {
+  font-family: "NationalFF";
+  font-weight: 300;
+  src: url("/static/fonts/National-Light.otf") format("opentype"); }
+
+h1, h2, h3, h4 {
+  font-weight: 200;
+  margin-bottom: 25px; }
+
 /* =Base
  ************************************ */
 body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Calibre", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 160%;
   vertical-align: baseline;
@@ -52,10 +63,12 @@ body {
 a {
   cursor: pointer;
   color: #0d0a11;
-  text-decoration: underline;
   white-space: nowrap;
   text-decoration: none;
-  transition: all 0.25s ease-out; }
+  border-bottom: 1px solid #0d0a11;
+  transition: all 0.2s ease-out; }
+  a:hover {
+    border-color: transparent; }
 
 .center {
   text-align: center; }
@@ -70,10 +83,13 @@ hr {
 /* =Containers
  **************** */
 .container {
-  max-width: 1020px;
-  margin: 0 auto; }
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 0 20px; }
+  .container p, .container ul {
+    font-size: 0.875em; }
 
-/* =Typography
- ************************************ */
-h1, h2, h3, h4 {
-  font-weight: 200; }
+section[role="main"] ul li:before {
+  content: "-";
+  display: inline-block;
+  margin: 0 10px; }
