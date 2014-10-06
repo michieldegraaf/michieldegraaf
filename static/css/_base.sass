@@ -2,8 +2,8 @@
  *************************************/
 
 body
+  +sans-serif
   font:
-    family: Helvetica Neue, Helvetica, Arial, sans-serif
     size: 100%
   line-height: 160%
   vertical-align: baseline
@@ -15,10 +15,13 @@ body
 a
   cursor: pointer
   color: $black
-  text-decoration: underline
   white-space: nowrap
   text-decoration: none
-  +transition(all, .25s)
+  border-bottom: 1px solid $black
+  +transition(all, .2s)
+
+  &:hover
+    border-color: transparent
 
 .center
   text-align: center
