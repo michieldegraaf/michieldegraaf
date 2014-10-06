@@ -6,4 +6,15 @@
 
 .container
   max-width: $sitewidth
-  margin: 0 auto
+  margin: $margin-high auto
+  padding: 0 20px
+
+  p, ul
+    +font-size(14)
+
+section[role="main"]
+  ul
+    li:before
+      content: "-"
+      display: inline-block
+      margin: 0 10px
