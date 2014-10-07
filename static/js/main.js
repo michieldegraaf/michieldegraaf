@@ -1,36 +1,104 @@
-// To make images retina, add a class "2x" to the img element
-// and add a <image-name>@2x.png image. Assumes jquery is loaded.
- 
-function isRetina() {
-	var mediaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
-					  (min--moz-device-pixel-ratio: 1.5),\
-					  (-o-min-device-pixel-ratio: 3/2),\
-					  (min-resolution: 1.5dppx)";
- 
-	if (window.devicePixelRatio > 1)
-		return true;
- 
-	if (window.matchMedia && window.matchMedia(mediaQuery).matches)
-		return true;
- 
-	return false;
-};
- 
- 
-function retina() {
-	
-	if (!isRetina())
-		return;
-	
-	$("img.2x").map(function(i, image) {
-		
-		var path = $(image).attr("src");
-		
-		path = path.replace(".png", "@2x.png");
-		path = path.replace(".jpg", "@2x.jpg");
-		
-		$(image).attr("src", path);
-	});
-};
- 
-$(document).ready(retina);
+(function() {
+  $(function() {
+    var H, Particle, W, animateParticles, canvas, clearCanvas, colorArray, createParticles, ctx, drawParticles, initParticleSystem, particleCount, particles, updateParticles;
+    Particle = function() {
+      this.color = colorArray[Math.floor((Math.random() * 5) + 1)];
+      this.x = Math.random() * W;
+      this.y = Math.random() * H;
+      this.direction = {
+        x: -1 + Math.random() * 2,
+        y: -1 + Math.random() * 2
+      };
+      this.vx = 1 * Math.random() + .05;
+      this.vy = 1 * Math.random() + .05;
+      this.radius = .9 * Math.random() + 1;
+      this.move = function() {
+        this.x += this.vx * this.direction.x;
+        this.y += this.vy * this.direction.y;
+      };
+      this.changeDirection = function(axis) {
+        this.direction[axis] *= -1;
+      };
+      this.draw = function() {
+        ctx.beginPath();
+        ctx.fillStyle = this.color;
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        ctx.fill();
+      };
+      this.boundaryCheck = function() {
+        if (this.x >= W) {
+          this.x = W;
+          this.changeDirection("x");
+        } else if (this.x <= 0) {
+          this.x = 0;
+          this.changeDirection("x");
+        }
+        if (this.y >= H) {
+          this.y = H;
+          this.changeDirection("y");
+        } else if (this.y <= 0) {
+          this.y = 0;
+          this.changeDirection("y");
+        }
+      };
+    };
+    clearCanvas = function() {
+      ctx.clearRect(0, 0, W, H);
+    };
+    createParticles = function() {
+      var i, p;
+      i = particleCount - 1;
+      while (i >= 0) {
+        p = new Particle();
+        particles.push(p);
+        i--;
+      }
+    };
+    drawParticles = function() {
+      var i, p;
+      i = particleCount - 1;
+      while (i >= 0) {
+        p = particles[i];
+        p.draw();
+        i--;
+      }
+    };
+    updateParticles = function() {
+      var i, p;
+      i = particles.length - 1;
+      while (i >= 0) {
+        p = particles[i];
+        p.move();
+        p.boundaryCheck();
+        i--;
+      }
+    };
+    initParticleSystem = function() {
+      createParticles();
+      drawParticles();
+    };
+    animateParticles = function() {
+      clearCanvas();
+      drawParticles();
+      updateParticles();
+      requestAnimationFrame(animateParticles);
+    };
+    W = void 0;
+    H = void 0;
+    canvas = void 0;
+    ctx = void 0;
+    particleCount = 200;
+    particles = [];
+    colorArray = ["bisque", "teal", "crimson", "gold", "skyblue", "palegreen"];
+    W = window.innerWidth * .99;
+    H = window.innerHeight * .99;
+    canvas = $("#holyshtballs").get(0);
+    canvas.width = W;
+    canvas.height = H;
+    ctx = canvas.getContext("2d");
+    console.log(ctx);
+    initParticleSystem();
+    requestAnimationFrame(animateParticles);
+  });
+
+}).call(this);
