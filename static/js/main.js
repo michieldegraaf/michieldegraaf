@@ -96,7 +96,6 @@
     canvas.width = W;
     canvas.height = H;
     ctx = canvas.getContext("2d");
-    console.log(ctx);
     initParticleSystem();
     requestAnimationFrame(animateParticles);
   });
