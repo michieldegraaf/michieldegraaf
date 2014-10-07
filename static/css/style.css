@@ -1,24 +1,3 @@
-/* =Variables
- ************************************ */
-/* =Dimensions
- **************** */
-/* =Colors
- **************** */
-/* http://colours.neilorangepeel.com/ */
-/* =Mixins
- ************************************ */
-/* =@2x converter
- **************** */
-/* =Transition
- **************** */
-/* =Border radius
- **************** */
-/* =Font-size
- **************** */
-/* =Animations
- **************** */
-/* =Reset
- ************************************ */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
   display: block; }
 
@@ -38,18 +17,14 @@ button, textarea, input {
   -moz-box-shadow: none;
   box-shadow: none; }
 
-/* =Typography
- ************************************ */
 h1 {
   margin-bottom: 50px; }
 
 h2, h3, h4 {
   margin-bottom: 25px;
   color: #06061d;
-  font-size: 1.5625em; }
+  font-size: 1.5625rem; }
 
-/* =Base
- ************************************ */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
@@ -79,13 +54,11 @@ hr {
   background: #5b5b61;
   opacity: 0.25; }
 
-/* =Layout
- ************************************ */
 .container {
   width: 50%;
   margin: 100px 35% 100px 15%; }
   .container p, .container ul {
-    font-size: 0.9375em; }
+    font-size: 0.9375rem; }
 
 .content p, .content ul {
   margin-top: 12.5px; }
@@ -111,13 +84,13 @@ header[role="banner"] {
       height: 64px; }
   header[role="banner"] h1 {
     color: #06061d;
-    font-size: 2.5625em;
+    font-size: 2.5625rem;
     line-height: 110%; }
     header[role="banner"] h1 span {
       display: block;
       opacity: 0.5; }
   header[role="banner"] p {
-    font-size: 1.0625em;
+    font-size: 1.0625rem;
     opacity: 0.75; }
   header[role="banner"] #holyshtballs {
     position: absolute;
@@ -138,4 +111,43 @@ small {
   .content ul li span:hover,
   h2 span:hover,
   small:hover {
-    opacity: 1; }
+    opacity: 0.75; }
+
+@-webkit-keyframes bgcolorfade {
+  0% {
+    color: skyblue; }
+
+  33% {
+    color: mediumslateblue; }
+
+  66% {
+    color: #f3a578; }
+
+  100% {
+    color: skyblue; } }
+
+@-moz-keyframes bgcolorfade {
+  0% {
+    color: skyblue; }
+
+  33% {
+    color: mediumslateblue; }
+
+  66% {
+    color: #f3a578; }
+
+  100% {
+    color: skyblue; } }
+
+@keyframes bgcolorfade {
+  0% {
+    color: skyblue; }
+
+  33% {
+    color: mediumslateblue; }
+
+  66% {
+    color: #f3a578; }
+
+  100% {
+    color: skyblue; } }

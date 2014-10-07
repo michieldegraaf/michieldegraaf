@@ -1,8 +1,8 @@
-/* =Mixins
- *************************************/
+// =Mixins
+// ----------------------------------------------
 
-/* =@2x converter
- *****************/
+// =@2x converter
+// --------------------------
 
 =at2x($image_name, $w: auto, $h: auto, $extention: '.png')
   background:
@@ -16,8 +16,8 @@
       image: url(/images/$x2img)
       size: $w $h
 
-/* =Transition
- *****************/
+// =Transitions
+// --------------------------
 
 =transition($properties: all, $duration: .25s, $easing: ease-out)
   @if length($properties) > 1
@@ -27,37 +27,16 @@
   @else
     transition: $properties $duration $easing
 
-/* =Border radius
- *****************/
+// =Border radius
+// --------------------------
 
 =border-radius($value)
   -webkit-border-radius: $value
   -moz-border-radius: $value
   border-radius: $value
 
-/* =Font-size
- *****************/
+// =Font-size
+// --------------------------
 
 =font-size($value)
-  font-size: ($value / 16) + em
-
-/* =Animations
- *****************/
-
-=animate($name, $time, $loop, $effect)
-  -webkit-animation: $name $time $loop $effect
-  -moz-animation: $name $time $loop $effect
-  -ms-animation: $name $time $loop $effect
-  animation: $name $time $loop $effect
-
-=animation-duration($time)
-  -webkit-animation-duration: $time
-  -moz-animation-duration: $time
-  -ms-animation-duration: $time
-  animation-duration: $time
-
-=animation-delay($time)
-  -webkit-animation-delay: $time
-  -moz-animation-delay: $time
-  -ms-animation-delay: $time
-  animation-delay: $time
+  font-size: ($value / 16) + rem
