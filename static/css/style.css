@@ -4,6 +4,7 @@
  **************** */
 /* =Colors
  **************** */
+/* http://colours.neilorangepeel.com/ */
 /* =Mixins
  ************************************ */
 /* =@2x converter
@@ -39,33 +40,31 @@ button, textarea, input {
 
 /* =Typography
  ************************************ */
-@font-face {
-  font-family: "NationalFF";
-  font-weight: 300;
-  src: url("/static/fonts/National-Light.otf") format("opentype"); }
+h1 {
+  margin-bottom: 50px; }
 
-h1, h2, h3, h4 {
-  font-weight: 200;
-  margin-bottom: 25px; }
+h2, h3, h4 {
+  margin-bottom: 25px;
+  color: #06061d;
+  font-size: 1.5625em; }
 
 /* =Base
  ************************************ */
 body {
-  font-family: "Calibre", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 160%;
   vertical-align: baseline;
-  color: white;
-  background: royalblue;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  color: #5b5b61;
+  background: white;
+  -webkit-font-smoothing: antialiased; }
 
 a {
   cursor: pointer;
-  color: white;
+  color: #5b5b61;
   white-space: nowrap;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid #5b5b61;
   transition: all 0.15s ease-out; }
   a:hover {
     border-color: transparent; }
@@ -74,22 +73,69 @@ a {
   text-align: center; }
 
 hr {
-  margin: 100px;
+  display: block;
+  width: 15%;
   height: 1px;
-  background: rgba(0, 0, 0, 0.1); }
+  background: #5b5b61;
+  opacity: 0.25; }
 
 /* =Layout
  ************************************ */
-/* =Containers
- **************** */
 .container {
-  max-width: 600px;
-  margin: 100px auto;
-  padding: 0 20px; }
+  width: 50%;
+  margin: 100px 35% 100px 15%; }
   .container p, .container ul {
-    font-size: 0.875em; }
+    font-size: 0.9375em; }
 
-section[role="main"] ul li:before {
+.content p, .content ul {
+  margin-top: 12.5px; }
+.content ul li:before {
   content: "-";
   display: inline-block;
-  margin: 0 10px; }
+  margin-right: 10px; }
+
+header[role="banner"] {
+  position: relative;
+  overflow: hidden;
+  background: ghostwhite; }
+  header[role="banner"] .container {
+    position: relative;
+    z-index: 10;
+    margin-top: 200px;
+    margin-bottom: 200px; }
+  header[role="banner"] figure {
+    margin-bottom: 50px; }
+    header[role="banner"] figure img {
+      display: block;
+      width: 70px;
+      height: 64px; }
+  header[role="banner"] h1 {
+    color: #06061d;
+    font-size: 2.5625em;
+    line-height: 110%; }
+    header[role="banner"] h1 span {
+      display: block;
+      opacity: 0.5; }
+  header[role="banner"] p {
+    font-size: 1.0625em;
+    opacity: 0.75; }
+  header[role="banner"] #holyshtballs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.5; }
+
+footer[role="contentinfo"],
+.content ul li span,
+h2 span,
+small {
+  opacity: 0.5;
+  transition: opacity 0.25s ease-out; }
+  footer[role="contentinfo"]:hover,
+  .content ul li span:hover,
+  h2 span:hover,
+  small:hover {
+    opacity: 1; }
