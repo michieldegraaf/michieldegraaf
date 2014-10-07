@@ -4,15 +4,18 @@
 /* =Dimensions
  *****************/
 
-$sitewidth: 600px
+$spacer:        400px
 
-$margin-high: 100px
-$margin-mid: 50px
-$margin-low: 25px
+$spacer-sky:    $spacer / 2
+$spacer-high:   $spacer / 4
+$spacer-mid:    $spacer / 8
+$spacer-low:    $spacer / 16
 
 /* =Colors
  *****************/
 
-$black:     #0d0a11
-$dark:      #404752
-$primary:    SkyBlue
+/* http://colours.neilorangepeel.com/ */
+
+$primary:     midnightblue
+$text:        darken($primary, 20%)
+$text-light:  adjust-color($primary, $saturation: -60, $lightness: 10)
