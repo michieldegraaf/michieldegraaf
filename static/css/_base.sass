@@ -7,17 +7,16 @@ body
     size: 100%
   line-height: 160%
   vertical-align: baseline
-  color: white
-  background: royalblue
+  color: $text-light
+  background: white
   -webkit-font-smoothing: antialiased
-  text-rendering: optimizeLegibility
 
 a
   cursor: pointer
-  color: white
+  color: $text-light
   white-space: nowrap
   text-decoration: none
-  border-bottom: 1px solid rgba(255,255,255,.6)
+  border-bottom: 1px solid $text-light
   +transition(all, .15s)
 
   &:hover
@@ -27,6 +26,8 @@ a
   text-align: center
 
 hr
-  margin: 100px
+  display: block
+  width: 15%
   height: 1px
-  background: rgba(0,0,0,.1)
+  background: $text-light
+  opacity: .25
