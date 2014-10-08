@@ -17,6 +17,11 @@ button, textarea, input {
   -moz-box-shadow: none;
   box-shadow: none; }
 
+h1, h2, h3, h4 {
+  font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em; }
+
 h1 {
   margin-bottom: 50px; }
 
@@ -79,6 +84,7 @@ hr {
   -moz-border-radius: 3px;
   border-radius: 3px;
   transition: opacity 0.25s ease-out;
+  cursor: help;
   opacity: 0.25; }
 
 header[role="banner"] {
