@@ -85,25 +85,25 @@ $ ->
   H = undefined
   canvas = undefined
   ctx = undefined
-  particleCount = 200
+  particleCount = 100
   particles = []
   colorArray = [
-    # "rgba(0,0,0,.8)"
-    # "rgba(0,0,0,.7)"
-    # "rgba(0,0,0,.6)"
-    # "rgba(0,0,0,.5)"
-    # "rgba(0,0,0,.4)"
-    # "rgba(0,0,0,.3)"
-    # "rgba(0,0,0,.2)"
-    "bisque"
-    "teal"
-    "crimson"
-    "gold"
-    "skyblue"
-    "palegreen"
+    "rgba(0,0,0,.8)"
+    "rgba(0,0,0,.7)"
+    "rgba(0,0,0,.6)"
+    "rgba(0,0,0,.5)"
+    "rgba(0,0,0,.4)"
+    "rgba(0,0,0,.3)"
+    "rgba(0,0,0,.2)"
+    # "bisque"
+    # "teal"
+    # "crimson"
+    # "gold"
+    # "skyblue"
+    # "palegreen"
   ]
-  W = window.innerWidth * .99
-  H = window.innerHeight * .99
+  W = window.innerWidth + 200
+  H = 900
   canvas = $("#holyshtballs").get(0)
   canvas.width = W
   canvas.height = H
