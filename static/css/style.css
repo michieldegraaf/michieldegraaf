@@ -26,7 +26,7 @@ h2, h3, h4 {
   font-size: 1.5625rem; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "aktiv-grotesk-std", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 160%;
   vertical-align: baseline;
@@ -66,14 +66,28 @@ hr {
   content: "-";
   display: inline-block;
   margin-right: 10px; }
+.content h2 span {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 0px 5px 1px 4px;
+  font-size: 0.9375rem;
+  line-height: 140%;
+  letter-spacing: -0.05em;
+  vertical-align: top;
+  border: 2px solid #06061d;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  transition: opacity 0.25s ease-out;
+  opacity: 0.25; }
 
 header[role="banner"] {
   position: relative;
   overflow: hidden;
   background: ghostwhite;
-  -webkit-animation: bgcolorfade 280s infinite forwards linear;
-  -moz-animation: bgcolorfade 280s infinite forwards linear;
-  animation: bgcolorfade 280s infinite forwards linear; }
+  -webkit-animation: bgcolorfade 120s infinite forwards linear;
+  -moz-animation: bgcolorfade 120s infinite forwards linear;
+  animation: bgcolorfade 120s infinite forwards linear; }
   header[role="banner"] .container {
     position: relative;
     z-index: 10;
@@ -97,25 +111,23 @@ header[role="banner"] {
     opacity: 0.75; }
   header[role="banner"] #holyshtballs {
     position: absolute;
-    top: 0;
+    top: -100px;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: -100px;
     z-index: 1;
-    opacity: 0.5; }
+    opacity: 0.3; }
 
 footer[role="contentinfo"] p {
   font-size: 0.75rem; }
 
 footer[role="contentinfo"],
 .content ul li span,
-h2 span,
 small {
   opacity: 0.5;
   transition: opacity 0.25s ease-out; }
   footer[role="contentinfo"]:hover,
   .content ul li span:hover,
-  h2 span:hover,
   small:hover {
     opacity: 0.75; }
 
@@ -183,19 +195,19 @@ section[role="main"] {
     background-color: ghostwhite; }
 
   13% {
-    background-color: seashell; }
+    background-color: aliceblue; }
 
   25% {
     background-color: honeydew; }
 
   38% {
-    background-color: antiquewhite; }
+    background-color: aliceblue; }
 
   50% {
-    background-color: lightyellow; }
+    background-color: mintcream; }
 
   63% {
-    background-color: seashell; }
+    background-color: lightcyan; }
 
   75% {
     background-color: ivory; }
@@ -211,19 +223,19 @@ section[role="main"] {
     background-color: ghostwhite; }
 
   13% {
-    background-color: seashell; }
+    background-color: aliceblue; }
 
   25% {
     background-color: honeydew; }
 
   38% {
-    background-color: antiquewhite; }
+    background-color: aliceblue; }
 
   50% {
-    background-color: lightyellow; }
+    background-color: mintcream; }
 
   63% {
-    background-color: seashell; }
+    background-color: lightcyan; }
 
   75% {
     background-color: ivory; }
@@ -239,19 +251,19 @@ section[role="main"] {
     background-color: ghostwhite; }
 
   13% {
-    background-color: seashell; }
+    background-color: aliceblue; }
 
   25% {
     background-color: honeydew; }
 
   38% {
-    background-color: antiquewhite; }
+    background-color: aliceblue; }
 
   50% {
-    background-color: lightyellow; }
+    background-color: mintcream; }
 
   63% {
-    background-color: seashell; }
+    background-color: lightcyan; }
 
   75% {
     background-color: ivory; }
