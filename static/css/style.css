@@ -63,7 +63,7 @@ hr {
   width: 50%;
   margin: 100px 0 100px 15%; }
   .container p, .container ul {
-    font-size: 0.9375rem; }
+    font-size: 0.875rem; }
 
 .content p, .content ul {
   margin-top: 12.5px; }
@@ -90,7 +90,7 @@ hr {
 header[role="banner"] {
   position: relative;
   overflow: hidden;
-  background: ghostwhite;
+  background: mintcream;
   -webkit-animation: bgcolorfade 120s infinite forwards linear;
   -moz-animation: bgcolorfade 120s infinite forwards linear;
   animation: bgcolorfade 120s infinite forwards linear; }
@@ -180,28 +180,28 @@ section[role="main"] {
 
 @-moz-keyframes fadein {
   0% {
-    -moz-transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
     opacity: 0; }
 
   100% {
-    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
     opacity: 1; } }
 
 @keyframes fadein {
   0% {
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
     opacity: 0; }
 
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
     opacity: 1; } }
 
-@-webkit-keyframes bgcolorfade {
+@-webkit-keyframes bgcolorfadse {
   0% {
-    background-color: ghostwhite; }
+    background-color: mintcream; }
 
   13% {
-    background-color: aliceblue; }
+    background-color: gainsboro; }
 
   25% {
     background-color: honeydew; }
@@ -210,7 +210,7 @@ section[role="main"] {
     background-color: aliceblue; }
 
   50% {
-    background-color: mintcream; }
+    background-color: ghostwhite; }
 
   63% {
     background-color: lightcyan; }
@@ -222,14 +222,14 @@ section[role="main"] {
     background-color: azure; }
 
   100% {
-    background-color: ghostwhite; } }
+    background-color: mintcream; } }
 
-@-moz-keyframes bgcolorfade {
+@-moz-keyframes bgcolorfadse {
   0% {
-    background-color: ghostwhite; }
+    background-color: mintcream; }
 
   13% {
-    background-color: aliceblue; }
+    background-color: gainsboro; }
 
   25% {
     background-color: honeydew; }
@@ -238,7 +238,7 @@ section[role="main"] {
     background-color: aliceblue; }
 
   50% {
-    background-color: mintcream; }
+    background-color: ghostwhite; }
 
   63% {
     background-color: lightcyan; }
@@ -250,14 +250,14 @@ section[role="main"] {
     background-color: azure; }
 
   100% {
-    background-color: ghostwhite; } }
+    background-color: mintcream; } }
 
-@keyframes bgcolorfade {
+@keyframes bgcolorfadse {
   0% {
-    background-color: ghostwhite; }
+    background-color: mintcream; }
 
   13% {
-    background-color: aliceblue; }
+    background-color: gainsboro; }
 
   25% {
     background-color: honeydew; }
@@ -266,7 +266,7 @@ section[role="main"] {
     background-color: aliceblue; }
 
   50% {
-    background-color: mintcream; }
+    background-color: ghostwhite; }
 
   63% {
     background-color: lightcyan; }
@@ -278,7 +278,7 @@ section[role="main"] {
     background-color: azure; }
 
   100% {
-    background-color: ghostwhite; } }
+    background-color: mintcream; } }
 
 @media screen and (max-width: 1000px) {
   .container {
