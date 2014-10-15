@@ -27,6 +27,17 @@
   @else
     transition: $properties $duration $easing
 
+// =Keyframes
+// --------------------------
+
+=keyframes($animationName)
+  @-webkit-keyframes #{$animationName}
+    @content
+  @-moz-keyframes #{$animationName}
+    @content
+  @keyframes #{$animationName}
+    @content
+
 // =Border radius
 // --------------------------
 

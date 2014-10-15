@@ -39,7 +39,7 @@ section[role="main"]
 // Keyframes - FadeIn
 // --------------------------
 
-@-webkit-keyframes fadein
++keyframes(fadein)
   0%
     -webkit-transform: translateY(-20px)
     opacity: 0
@@ -47,38 +47,20 @@ section[role="main"]
     -webkit-transform: translateY(0)
     opacity: 1
 
-
-@-moz-keyframes fadein
-  0%
-    -moz-transform: translateY(-20px)
-    opacity: 0
-  100%
-    -moz-transform: translateY(0)
-    opacity: 1
-
-
-@keyframes fadein
-  0%
-    transform: translateY(-20px)
-    opacity: 0
-  100%
-    transform: translateY(0)
-    opacity: 1
-
 // Keyframes - BG color fade
 // --------------------------
 
-@-webkit-keyframes bgcolorfade
++keyframes(bgcolorfadse)
   0%
-    background-color: ghostwhite
+    background-color: mintcream
   13%
-    background-color: aliceblue
+    background-color: gainsboro
   25%
     background-color: honeydew
   38%
     background-color: aliceblue
   50%
-    background-color: mintcream
+    background-color: ghostwhite
   63%
     background-color: lightcyan
   75%
@@ -86,44 +68,4 @@ section[role="main"]
   88%
     background-color: azure
   100%
-    background-color: ghostwhite
-
-@-moz-keyframes bgcolorfade
-  0%
-    background-color: ghostwhite
-  13%
-    background-color: aliceblue
-  25%
-    background-color: honeydew
-  38%
-    background-color: aliceblue
-  50%
     background-color: mintcream
-  63%
-    background-color: lightcyan
-  75%
-    background-color: ivory
-  88%
-    background-color: azure
-  100%
-    background-color: ghostwhite
-
-@keyframes bgcolorfade
-  0%
-    background-color: ghostwhite
-  13%
-    background-color: aliceblue
-  25%
-    background-color: honeydew
-  38%
-    background-color: aliceblue
-  50%
-    background-color: mintcream
-  63%
-    background-color: lightcyan
-  75%
-    background-color: ivory
-  88%
-    background-color: azure
-  100%
-    background-color: ghostwhite
