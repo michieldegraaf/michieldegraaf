@@ -6,7 +6,8 @@
   margin: $spacer-high 0 $spacer-high 15%
 
   p, ul
-    +font-size(14)
+    +font-size(15)
+    font-weight: 300
 
 .content
   p, ul
@@ -24,6 +25,7 @@
       margin-left: 5px
       padding: 0px 5px 1px 4px
       +font-size(15)
+      font-weight: 700
       line-height: 140%
       letter-spacing: -.05em
       vertical-align: top
@@ -36,7 +38,7 @@
 header[role="banner"]
   position: relative
   overflow: hidden
-  background: mintcream
+  background: seashell
   -webkit-animation: bgcolorfade 120s infinite forwards linear
   -moz-animation: bgcolorfade 120s infinite forwards linear
   animation: bgcolorfade 120s infinite forwards linear
@@ -53,12 +55,13 @@ header[role="banner"]
 
     img
       display: block
-      width: 70px
-      height: 64px
+      width: 56px
+      height: 52px
+      +border-radius(1px)
 
   h1
     color: $text
-    +font-size(41)
+    +font-size(44)
     line-height: 110%
 
     span
@@ -66,7 +69,8 @@ header[role="banner"]
       opacity: .5
 
   p
-    +font-size(17)
+    +font-size(18)
+    font-weight: 200
     opacity: .75
 
   #holyshtballs
@@ -80,7 +84,7 @@ header[role="banner"]
 
 footer[role="contentinfo"]
   p
-    +font-size(12)
+    font-size: smaller
 
 footer[role="contentinfo"],
 .content ul li span,

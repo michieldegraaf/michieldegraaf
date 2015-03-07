@@ -3,17 +3,16 @@
 
 =sans-serif
   font:
-    family: 'aktiv-grotesk-std', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    family: 'nimbus-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    weight: 400
 
 =serif
   font:
     family: 'Georgia', Times, serif
 
 h1,h2,h3,h4
-  font:
-    family: 'nimbus-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
-    weight: 700
-  letter-spacing: -.03em
+  +sans-serif
+  font-weight: 300
 
 h1
   margin-bottom: $spacer-mid
@@ -21,4 +20,4 @@ h1
 h2,h3,h4
   margin-bottom: $spacer-low
   color: $text
-  +font-size(25)
+  +font-size(28)
