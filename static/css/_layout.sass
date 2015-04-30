@@ -3,7 +3,7 @@
 
 .container
   width: 50%
-  margin: $spacer-high 0 $spacer-high 15%
+  margin: $spacer-high 0 $spacer-high 20%
 
   p, ul
     +font-size(15)
@@ -38,10 +38,36 @@
 header[role="banner"]
   position: relative
   overflow: hidden
-  background: seashell
+  background: #edede3
+  +transition(all, .5s)
   -webkit-animation: bgcolorfade 120s infinite forwards linear
   -moz-animation: bgcolorfade 120s infinite forwards linear
   animation: bgcolorfade 120s infinite forwards linear
+
+  h1, p, &:after, .logo
+    +transition(all, .5s)
+
+  &:after
+    position: absolute
+    content: ""
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: url(../images/michieldegraaf-head.jpg) no-repeat center center
+    background-size: cover
+    opacity: 0
+
+  &.fart
+    &:after
+      opacity: 1
+
+    figure .logo
+      fill: $text
+
+    h1, p, p a
+      color: transparent
+      border-color: transparent
 
   .container
     position: relative
@@ -51,17 +77,23 @@ header[role="banner"]
       bottom: $spacer-sky
 
   figure
+    overflow: hidden
     margin-bottom: $spacer-mid
 
-    img
+    .logo
       display: block
+      float: left
       width: 56px
       height: 52px
-      +border-radius(1px)
+      fill: #df284d
+      background: rgba(#fff, .6)
+
+      &:hover
+        cursor: help
 
   h1
     color: $text
-    +font-size(44)
+    +font-size(40)
     line-height: 110%
 
     span
@@ -69,18 +101,13 @@ header[role="banner"]
       opacity: .5
 
   p
-    +font-size(18)
+    +font-size(17)
     font-weight: 200
-    opacity: .75
+    color: $text
+    opacity: .6
 
-  #holyshtballs
-    position: absolute
-    top: -100px
-    right: 0
-    bottom: 0
-    left: -100px
-    z-index: 1
-    opacity: .3
+    a
+      color: $text
 
 footer[role="contentinfo"]
   p
