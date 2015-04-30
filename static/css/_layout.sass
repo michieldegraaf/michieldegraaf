@@ -38,14 +38,14 @@
 header[role="banner"]
   position: relative
   overflow: hidden
-  background: #edede3
+  background: $secondary
   +transition(all, .5s)
   -webkit-animation: bgcolorfade 120s infinite forwards linear
   -moz-animation: bgcolorfade 120s infinite forwards linear
   animation: bgcolorfade 120s infinite forwards linear
 
   h1, p, &:after, .logo
-    +transition(all, .5s)
+    +transition(all, .45s)
 
   &:after
     position: absolute
@@ -85,7 +85,7 @@ header[role="banner"]
       float: left
       width: 56px
       height: 52px
-      fill: #df284d
+      fill: $swissred
       background: rgba(#fff, .6)
 
       &:hover

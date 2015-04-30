@@ -94,13 +94,13 @@ hr {
 header[role="banner"] {
   position: relative;
   overflow: hidden;
-  background: #edede3;
+  background: #f2f2eb;
   transition: all 0.5s ease-out;
   -webkit-animation: bgcolorfade 120s infinite forwards linear;
   -moz-animation: bgcolorfade 120s infinite forwards linear;
   animation: bgcolorfade 120s infinite forwards linear; }
   header[role="banner"] h1, header[role="banner"] p, header[role="banner"]:after, header[role="banner"] .logo {
-    transition: all 0.5s ease-out; }
+    transition: all 0.45s ease-out; }
   header[role="banner"]:after {
     position: absolute;
     content: "";
