@@ -23,12 +23,12 @@ h1, h2, h3, h4 {
   font-weight: 300; }
 
 h1 {
-  margin-bottom: 62.5px; }
+  margin-bottom: 42.5px; }
 
 h2, h3, h4 {
-  margin-bottom: 31.25px;
+  margin-bottom: 21.25px;
   color: #06061d;
-  font-size: 1.75rem; }
+  font-size: 1.6875rem; }
 
 body {
   font-family: "nimbus-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -56,20 +56,20 @@ a {
 
 hr {
   display: block;
-  width: 15%;
+  width: 20%;
   height: 1px;
   background: #73737c;
   opacity: 0.2; }
 
 .container {
   width: 50%;
-  margin: 125px 0 125px 15%; }
+  margin: 85px 0 85px 20%; }
   .container p, .container ul {
     font-size: 0.9375rem;
     font-weight: 300; }
 
 .content p, .content ul {
-  margin-top: 15.625px; }
+  margin-top: 10.625px; }
 .content ul li:before {
   content: "-";
   display: inline-block;
@@ -94,43 +94,61 @@ hr {
 header[role="banner"] {
   position: relative;
   overflow: hidden;
-  background: seashell;
+  background: #f2f2eb;
+  transition: all 0.5s ease-out;
   -webkit-animation: bgcolorfade 120s infinite forwards linear;
   -moz-animation: bgcolorfade 120s infinite forwards linear;
   animation: bgcolorfade 120s infinite forwards linear; }
+  header[role="banner"] h1, header[role="banner"] p, header[role="banner"]:after, header[role="banner"] .logo {
+    transition: all 0.45s ease-out; }
+  header[role="banner"]:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../images/michieldegraaf-head.jpg) no-repeat center center;
+    background-size: cover;
+    opacity: 0; }
+  header[role="banner"].fart:after {
+    opacity: 1; }
+  header[role="banner"].fart figure .logo {
+    fill: #06061d; }
+  header[role="banner"].fart h1, header[role="banner"].fart p, header[role="banner"].fart p a {
+    color: transparent;
+    border-color: transparent; }
   header[role="banner"] .container {
     position: relative;
     z-index: 10;
-    margin-top: 250px;
-    margin-bottom: 250px; }
+    margin-top: 170px;
+    margin-bottom: 170px; }
   header[role="banner"] figure {
-    margin-bottom: 62.5px; }
-    header[role="banner"] figure img {
+    overflow: hidden;
+    margin-bottom: 42.5px; }
+    header[role="banner"] figure .logo {
       display: block;
+      float: left;
       width: 56px;
       height: 52px;
-      -webkit-border-radius: 1px;
-      -moz-border-radius: 1px;
-      border-radius: 1px; }
+      fill: #df284d;
+      background: rgba(255, 255, 255, 0.6); }
+      header[role="banner"] figure .logo:hover {
+        cursor: help; }
   header[role="banner"] h1 {
     color: #06061d;
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     line-height: 110%; }
     header[role="banner"] h1 span {
       display: block;
       opacity: 0.5; }
   header[role="banner"] p {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     font-weight: 200;
-    opacity: 0.75; }
-  header[role="banner"] #holyshtballs {
-    position: absolute;
-    top: -100px;
-    right: 0;
-    bottom: 0;
-    left: -100px;
-    z-index: 1;
-    opacity: 0.3; }
+    color: #06061d;
+    opacity: 0.6; }
+    header[role="banner"] p a {
+      color: #06061d; }
 
 footer[role="contentinfo"] p {
   font-size: smaller; }
@@ -216,98 +234,15 @@ section[role="main"] {
     transform: translateY(0);
     opacity: 1; } }
 
-@-webkit-keyframes bgcolorfade {
-  0% {
-    background-color: seashell; }
-
-  13% {
-    background-color: floralwhite; }
-
-  25% {
-    background-color: honeydew; }
-
-  38% {
-    background-color: aliceblue; }
-
-  50% {
-    background-color: ghostwhite; }
-
-  63% {
-    background-color: lightcyan; }
-
-  75% {
-    background-color: ivory; }
-
-  88% {
-    background-color: azure; }
-
-  100% {
-    background-color: seashell; } }
-
-@-moz-keyframes bgcolorfade {
-  0% {
-    background-color: seashell; }
-
-  13% {
-    background-color: floralwhite; }
-
-  25% {
-    background-color: honeydew; }
-
-  38% {
-    background-color: aliceblue; }
-
-  50% {
-    background-color: ghostwhite; }
-
-  63% {
-    background-color: lightcyan; }
-
-  75% {
-    background-color: ivory; }
-
-  88% {
-    background-color: azure; }
-
-  100% {
-    background-color: seashell; } }
-
-@keyframes bgcolorfade {
-  0% {
-    background-color: seashell; }
-
-  13% {
-    background-color: floralwhite; }
-
-  25% {
-    background-color: honeydew; }
-
-  38% {
-    background-color: aliceblue; }
-
-  50% {
-    background-color: ghostwhite; }
-
-  63% {
-    background-color: lightcyan; }
-
-  75% {
-    background-color: ivory; }
-
-  88% {
-    background-color: azure; }
-
-  100% {
-    background-color: seashell; } }
-
 @media screen and (max-width: 1000px) {
   .container {
-    width: 70%; } }
+    width: 70%;
+    margin-left: 15%; } }
 @media screen and (max-width: 600px) {
   .container {
     width: auto;
-    margin: 62.5px auto;
+    margin: 42.5px auto;
     padding: 0 25px; }
 
   header[role="banner"] .container {
-    margin: 125px auto; } }
+    margin: 85px auto; } }
