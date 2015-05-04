@@ -64,6 +64,9 @@ header[role="banner"]
 
     figure .logo
       fill: $text
+      -webkit-animation: none
+      -moz-animation: none
+      animation: none
 
     h1, p, p a
       color: transparent
@@ -87,6 +90,9 @@ header[role="banner"]
       height: 52px
       fill: $swissred
       background: rgba(#fff, .6)
+      -webkit-animation: fillfade 50s infinite linear
+      -moz-animation: fillfade 50s infinite linear
+      animation: fillfade 50s infinite linear
 
       &:hover
         cursor: help
@@ -103,11 +109,10 @@ header[role="banner"]
   p
     +font-size(17)
     font-weight: 200
-    color: $text
-    opacity: .6
+    color: $text-light
 
     a
-      color: $text
+      color: $text-light
 
 footer[role="contentinfo"]
   p

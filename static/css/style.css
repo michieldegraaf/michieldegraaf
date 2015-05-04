@@ -114,7 +114,10 @@ header[role="banner"] {
   header[role="banner"].fart:after {
     opacity: 1; }
   header[role="banner"].fart figure .logo {
-    fill: #06061d; }
+    fill: #06061d;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none; }
   header[role="banner"].fart h1, header[role="banner"].fart p, header[role="banner"].fart p a {
     color: transparent;
     border-color: transparent; }
@@ -132,7 +135,10 @@ header[role="banner"] {
       width: 56px;
       height: 52px;
       fill: #df284d;
-      background: rgba(255, 255, 255, 0.6); }
+      background: rgba(255, 255, 255, 0.6);
+      -webkit-animation: fillfade 50s infinite linear;
+      -moz-animation: fillfade 50s infinite linear;
+      animation: fillfade 50s infinite linear; }
       header[role="banner"] figure .logo:hover {
         cursor: help; }
   header[role="banner"] h1 {
@@ -145,10 +151,9 @@ header[role="banner"] {
   header[role="banner"] p {
     font-size: 1.0625rem;
     font-weight: 200;
-    color: #06061d;
-    opacity: 0.6; }
+    color: #73737c; }
     header[role="banner"] p a {
-      color: #06061d; }
+      color: #73737c; }
 
 footer[role="contentinfo"] p {
   font-size: smaller; }
@@ -233,6 +238,54 @@ section[role="main"] {
     -moz-transform: translateY(0);
     transform: translateY(0);
     opacity: 1; } }
+
+@-webkit-keyframes fillfade {
+  0% {
+    fill: #df284d; }
+
+  25% {
+    fill: #eb1c34; }
+
+  50% {
+    fill: #d3343a; }
+
+  75% {
+    fill: #eb1c34; }
+
+  100% {
+    fill: #df284d; } }
+
+@-moz-keyframes fillfade {
+  0% {
+    fill: #df284d; }
+
+  25% {
+    fill: #eb1c34; }
+
+  50% {
+    fill: #d3343a; }
+
+  75% {
+    fill: #eb1c34; }
+
+  100% {
+    fill: #df284d; } }
+
+@keyframes fillfade {
+  0% {
+    fill: #df284d; }
+
+  25% {
+    fill: #eb1c34; }
+
+  50% {
+    fill: #d3343a; }
+
+  75% {
+    fill: #eb1c34; }
+
+  100% {
+    fill: #df284d; } }
 
 @media screen and (max-width: 1000px) {
   .container {

@@ -50,3 +50,18 @@ section[role="main"]
     -moz-transform: translateY(0)
     transform: translateY(0)
     opacity: 1
+
+// Keyframes - BG color fade
+// --------------------------
+
++keyframes(fillfade)
+  0%
+    fill: $swissred
+  25%
+    fill: adjust-color($swissred, $saturation: 10, $hue: 5)
+  50%
+    fill: adjust-color($swissred, $saturation: -10, $hue: 10)
+  75%
+    fill: adjust-color($swissred, $saturation: 10, $hue: 5)
+  100%
+    fill: $swissred
