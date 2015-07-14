@@ -39,38 +39,6 @@ header[role="banner"]
   position: relative
   overflow: hidden
   background: $secondary
-  +transition(all, .5s)
-  -webkit-animation: bgcolorfade 120s infinite forwards linear
-  -moz-animation: bgcolorfade 120s infinite forwards linear
-  animation: bgcolorfade 120s infinite forwards linear
-
-  h1, p, &:after, .logo
-    +transition(all, .45s)
-
-  &:after
-    position: absolute
-    content: ""
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    background: url(../images/michieldegraaf-head.jpg) no-repeat center center
-    background-size: cover
-    opacity: 0
-
-  &.fart
-    &:after
-      opacity: 1
-
-    figure .logo
-      fill: $text
-      -webkit-animation: none
-      -moz-animation: none
-      animation: none
-
-    h1, p, p a
-      color: transparent
-      border-color: transparent
 
   .container
     position: relative
@@ -86,13 +54,9 @@ header[role="banner"]
     .logo
       display: block
       float: left
-      width: 56px
-      height: 52px
-      fill: $swissred
-      background: rgba(#fff, .6)
-      -webkit-animation: fillfade 50s infinite linear
-      -moz-animation: fillfade 50s infinite linear
-      animation: fillfade 50s infinite linear
+      width: 54px
+      height: 41px
+      fill: $text
 
       &:hover
         cursor: help
@@ -109,12 +73,10 @@ header[role="banner"]
   p
     +font-size(17)
     font-weight: 200
-    color: $text-light
-
-    a
-      color: $text-light
 
 footer[role="contentinfo"]
+  overflow: hidden
+
   p
     font-size: smaller
 
@@ -126,3 +88,30 @@ small
 
   &:hover
     opacity: .75
+
+body.fart
+  background: adjust-color($primary, $saturation: -30, $lightness: -10)
+  color: $text-lighter
+
+  h2,h3,h4
+    color: $text-lighter
+
+  a
+    color: $text-lighter
+    border-color: $text-lighter
+
+    &:hover
+      border-color: transparent
+
+  header[role="banner"]
+    background: adjust-color($primary, $saturation: -20, $lightness: -15)
+
+    .logo
+      fill: white
+
+    h1
+      color: $text-lighter
+
+  .content
+    h2 span
+      border-color: rgba(255,255,255,.5)

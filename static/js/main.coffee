@@ -1,5 +1,5 @@
 $(".logo").click ->
-  $("header").toggleClass "fart"
+  $("body").toggleClass "fart"
   return
 
 $(document).ready ->

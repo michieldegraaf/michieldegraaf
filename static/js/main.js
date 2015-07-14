@@ -1,6 +1,6 @@
 (function() {
   $(".logo").click(function() {
-    $("header").toggleClass("fart");
+    $("body").toggleClass("fart");
   });
 
   $(document).ready(function() {
