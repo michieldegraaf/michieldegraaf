@@ -1,0 +1,210 @@
+// =Contrast switch
+// ----------------------------------------------
+
+body.fart
+  background: $color-c-1
+  color: $color-c-2
+  +mono
+  font-weight: 400
+
+  &:after
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-image: linear-gradient(to bottom, transparent 0px, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 2px * 2)
+    background-size: 100% 2px * 2
+
+  h2,h3,h4
+    +mono
+    font-weight: 400
+    color: $color-c-2
+
+  a
+    color: $color-c-2 !important
+    border-color: rgba($color-c-2, .2) !important
+
+    &:hover
+      border-color: transparent !important
+
+  hr
+    background: rgba($color-c-2, .5)
+
+  header[role="banner"]
+    background: transparent
+    border-color: rgba(255,255,255,.1)
+
+    .logo
+      fill: rgba($color-c-2, .3)
+      filter: blur(3px)
+
+    .logo,
+    .container h1,
+    .container p
+      color: $color-c-2
+      animation: distort 5s infinite, blur 30ms infinite, flick 50ms infinite, jump 50ms infinite
+      filter: blur(3px)
+      -webkit-transform: translateY(0)
+      -moz-transform: translateY(0)
+      transform: translateY(0)
+
+    h1
+      +mono
+
+    p
+      font-weight: 400
+
+  .container
+    position: relative
+    z-index: 99999
+
+    p, ul
+      font-weight: 400
+      animation: distort 5s infinite, blur 30ms infinite, flick 50ms infinite, jump 50ms infinite
+      filter: blur(3px)
+
+body.fart
+  background: $color-c-1
+  animation: crt 5ms infinite
+  text-shadow: 0 0 1px $color-c-2, 1px 1px 1px blue, -1px -1px 1px red
+
+  &:after
+    box-shadow: inset 0 0 10em rgba(0,0,0,.5), inset 0 0 2em rgba(0,0,0,.1)
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: -1
+    content: ""
+
+  @keyframes crt
+    28%
+      background: darken($color-c-1, 1%)
+
+    30%
+      background: lighten($color-c-1, 1%)
+
+    33%
+      background: darken($color-c-1, 1%)
+
+    34%
+      background: lighten($color-c-1, 1%)
+
+    35%
+      background: darken($color-c-1, 2%)
+
+  @keyframes blur
+    0%
+      filter: blur(1px)
+      opacity: 0.8
+
+    50%
+      filter: blur(1px)
+      opacity: 1
+
+    100%
+      filter: blur(1px)
+      opacity: 0.8
+
+
+  @keyframes flick
+    50%
+      left: 2px
+
+    51%
+      left: 0
+
+
+  @keyframes jump
+    30%
+      top: 10px
+
+    31%
+      top: 0
+
+  @keyframes distort
+    40%
+      opacity: 1
+      top: 0
+      left: 0
+      transform: scale(1, 1)
+      transform: skew(0, 0)
+
+    41%
+      opacity: 0.8
+      top: 0px
+      left: -100px
+      transform: scale(1, 1.2)
+      transform: skew(50deg, 0)
+
+    42%
+      opacity: 0.8
+      top: 0px
+      left: 100px
+      transform: scale(1, 1.2)
+      transform: skew(-80deg, 0)
+
+    43%
+      opacity: 1
+      top: 0
+      left: 0
+      transform: scale(1, 1)
+      transform: skew(0, 0)
+
+  .just
+    opacity: 1
+
+  @keyframes appear
+    0%
+      filter: blur(5px)
+      opacity: 0.85
+    50%
+      filter: blur(3px)
+      opacity: 0.85
+    100%
+      filter: blur(4px)
+      opacity: 0.85
+
+  @keyframes snapped
+    0%
+      filter: blur(5px)
+      opacity: 0.85
+
+    50%
+      filter: blur(3px)
+      opacity: 0.85
+
+    100%
+      filter: blur(4px)
+      opacity: 0.85
+
+
+  @keyframes beersip
+    0%
+      top: 0
+
+    10%
+      top: -10%
+
+    12%
+      top: 0
+
+    54%
+      top: 0
+
+    55%
+      top: -30%
+
+    56%
+      top: 0
+
+    86%
+      top: 0
+
+    87%
+      top: -60%
+
+    88%
+      top: 0
