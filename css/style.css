@@ -145,6 +145,72 @@ small {
   left: 0;
   opacity: 0; }
 
+nav[role="navigation"] {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 20px; }
+  nav[role="navigation"] label {
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-indent: -9999px;
+    position: relative;
+    cursor: pointer; }
+    nav[role="navigation"] label span,
+    nav[role="navigation"] label span:before,
+    nav[role="navigation"] label span:after {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 16px;
+      margin-left: -9px;
+      display: block;
+      height: 2px;
+      width: 18px;
+      background: #e23b7b;
+      border-radius: 2px;
+      content: ""; }
+    nav[role="navigation"] label span:before {
+      top: 6px; }
+    nav[role="navigation"] label span:after {
+      top: 12px; }
+  nav[role="navigation"] input {
+    display: none;
+    z-index: 900; }
+    nav[role="navigation"] input:checked + label {
+      opacity: 0.5; }
+    nav[role="navigation"] input:checked ~ ul {
+      visibility: visible;
+      opacity: 1;
+      top: 0; }
+  nav[role="navigation"] input ~ ul {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    top: -20px; }
+  nav[role="navigation"] ul {
+    display: block;
+    overflow: hidden;
+    transition: all 0.3s;
+    float: left;
+    z-index: 1000;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden; }
+    nav[role="navigation"] ul li {
+      display: block;
+      margin-top: 1px; }
+      nav[role="navigation"] ul li a {
+        display: block;
+        padding: 8px 15px;
+        color: rgba(226, 59, 123, 0.5);
+        border: 0 none;
+        z-index: 900; }
+        nav[role="navigation"] ul li a:hover {
+          color: #e23b7b; }
+
 header[role="banner"] figure,
 header[role="banner"] h1,
 header[role="banner"] p,
@@ -221,11 +287,46 @@ section[role="main"] {
     padding: 0 25px; }
 
   header[role="banner"] .container {
-    margin: 125px auto; } }
+    margin: 125px auto; }
+
+  nav[role="navigation"] {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: #310838;
+    z-index: 1000; }
+    nav[role="navigation"] label {
+      width: 74px;
+      height: 64px; }
+      nav[role="navigation"] label span,
+      nav[role="navigation"] label span:before,
+      nav[role="navigation"] label span:after {
+        left: 25px;
+        margin-left: 0;
+        top: 25px;
+        width: 24px; }
+      nav[role="navigation"] label span:before {
+        left: 0;
+        top: 6px; }
+      nav[role="navigation"] label span:after {
+        left: 0;
+        top: 12px; }
+    nav[role="navigation"] input ~ ul {
+      top: 0; }
+    nav[role="navigation"] ul {
+      float: none; }
+      nav[role="navigation"] ul li {
+        margin: 0; }
+        nav[role="navigation"] ul li a {
+          padding-left: 25px;
+          color: #e23b7b;
+          background: #310838;
+          border-top: 1px solid rgba(255, 255, 255, 0.1); } }
 body.fart {
   background: #252926;
   color: #c3ef8f;
-  font-family: "source-code-pro", "Lucida Console", Monaco, "Courier New", Courier, monospace;
+  font-family: "Input Sans Narrow", "source-code-pro", "Lucida Console", Monaco, "Courier New", Courier, monospace;
   font-weight: 400; }
   body.fart:after {
     position: fixed;
@@ -236,7 +337,7 @@ body.fart {
     background-image: linear-gradient(to bottom, transparent 0px, transparent 2px, rgba(0, 0, 0, 0.2) 2px, rgba(0, 0, 0, 0.2) 4px);
     background-size: 100% 4px; }
   body.fart h2, body.fart h3, body.fart h4 {
-    font-family: "source-code-pro", "Lucida Console", Monaco, "Courier New", Courier, monospace;
+    font-family: "Input Sans Narrow", "source-code-pro", "Lucida Console", Monaco, "Courier New", Courier, monospace;
     font-weight: 400;
     color: #c3ef8f; }
   body.fart a {
@@ -262,7 +363,7 @@ body.fart {
       -moz-transform: translateY(0);
       transform: translateY(0); }
     body.fart header[role="banner"] h1 {
-      font-family: "source-code-pro", "Lucida Console", Monaco, "Courier New", Courier, monospace; }
+      font-family: "Input Sans Narrow", "source-code-pro", "Lucida Console", Monaco, "Courier New", Courier, monospace; }
     body.fart header[role="banner"] p {
       font-weight: 400; }
   body.fart .container {

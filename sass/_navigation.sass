@@ -1,0 +1,80 @@
+// =Navigation
+// ----------------------------------------------
+
+nav[role="navigation"]
+  display: block
+  position: fixed
+  top: 20px
+  left: 20px
+
+  label
+    display: block
+    width: 48px
+    height: 48px
+    text-indent: -9999px
+    position: relative
+    cursor: pointer
+
+    span,
+    span:before,
+    span:after
+      display: block
+      position: absolute
+      left: 50%
+      top: 16px
+      margin-left: -9px
+      display: block
+      height: 2px
+      width: 18px
+      background: $pink
+      border-radius: 2px
+      content: ""
+
+    span:before
+      top: 6px
+
+    span:after
+      top: 12px
+
+  input
+    display: none
+    z-index: 900
+
+    &:checked + label
+      opacity: .5
+
+    &:checked ~ ul
+      visibility: visible
+      opacity: 1
+      top: 0
+
+  input ~ ul
+    position: relative
+    visibility: hidden
+    opacity: 0
+    top: -20px
+
+  ul
+    display: block
+    overflow: hidden
+    transition: all .3s
+    float: left
+    z-index: 1000
+    backface-visibility: hidden
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    -ms-backface-visibility: hidden
+
+    li
+      display: block
+      margin-top: 1px
+
+      a
+        display: block
+        padding: 8px 15px
+        color: rgba($pink, .5)
+        border: 0 none
+        z-index: 900
+
+        &:hover
+          color: rgba($pink, 1)
