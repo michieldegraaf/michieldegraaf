@@ -17,7 +17,7 @@
     %meta{:content => "Michiel de Graaf - Digital product designer", :name => "twitter:title"}/
     %meta{:content => "I create interfaces, shape brands and craft things for the web. In other words I research what makes people tick, create, break and fix things, try to give design purpose and wrangle with code.", :name => "twitter:description"}/
     %meta{:content => "http://michieldegraaf.com/img/michieldegraaf-social-img-1.jpg", :name => "twitter:image"}/
-    %meta{:content => "@graafdemichiel", :name => "twitter:site"}/
+    %meta{:content => "@michieldegraaf", :name => "twitter:site"}/
 
     %link{:href => "/img/favicon.ico", :rel => "shortcut icon"}/
     %link{:href => "/img/apple-touch-icon.png", :rel => "apple-touch-icon"}/
@@ -45,7 +45,7 @@
           In other words I research what makes people tick, create, break and fix things, give design purpose and wrangle with code. Making brewing beer easy at
           = succeed "." do
             %a{:href => "http://www.brewbot.io", :target => "_blank"} Brewbot
-    %section{:role => "main"}
+    %section#work{:role => "main"}
       .container.content
         %h2 Work
         %p
@@ -95,28 +95,32 @@
             = succeed "," do
               %a{:href => "http://kpn.nl", :target => "_blank"} KPN
             %a{:href => "http://deltalloyd.nl/", :target => "_blank"} Delta Lloyd
-      %hr/
+      %hr#social/
       .container.content
         %h2 Elsewhere
         %ul
+          %li
+            %a{:href => "mailto:mail@michieldegraaf.com"} Email
           %li
             %a{:href => "http://twitter.com/michieldegraaf", :target => "_blank"} Twitter
           %li
             %a{:href => "http://dribbble.com/michieldegraaf", :target => "_blank"} Dribbble
           %li
-            %a{:href => "http://instagram.com/michieldegraaf", :target => "_blank"} Instagram
+            %a{:href => "http://github.com/michieldegraaf", :target => "_blank"} Github
           %li
             %a{:href => "http://michieldegraaf.com/blog", :target => "_blank"} Blog
           %li
-            %a{:href => "http://github.com/michieldegraaf", :target => "_blank"} Github
+            %a{:href => "http://instagram.com/michieldegraaf", :target => "_blank"} Instagram
           %li
-            %a{:href => "http://soundcloud.com/michiel-de-graaf-1", :target => "_blank"} Soundcloud
-      %hr/
+            %a{:href => "http://www.michieldegraaf.com/resume.pdf", :target => "_blank"} Resume
+      %hr#things/
       .container.content
         %h2
           Things
           %span 16
         %ul
+          %li
+            %a{:href => "http://michiel.link", :target => "_blank"} t_c01c7_o-@n37
           %li
             %a{:href => "http://seagull.pizza", :target => "_blank"} Seagull Pizza
           %li
@@ -140,6 +144,8 @@
           %li
             %a{:href => "http://fourdetrance.com/", :target => "_blank"} Four de Trance
           %li
+            %a{:href => "http://brewbot.sexy", :target => "_blank"} Brewbot.sexy
+          %li
             Mario.plumbing
             %span - In the tube
           %li
@@ -152,6 +158,25 @@
             Depth Dwellers
             %span - Zooop!
       %hr/
+
+    %nav{:role => "navigation"}
+      %dropdown
+        %input#toggle2{:type => "checkbox"}/
+        %label{:for => "toggle2"}
+          Menu
+          %span
+        %ul
+          %li
+            %a.work{:href => "#work"} Work
+          %li
+            %a.social{:href => "#social"} Social
+          %li
+            %a.things{:href => "#things"} Things
+          %li
+            %a.resume{:href => "http://www.michieldegraaf.com/resume.pdf"} Resume
+          %li
+            %a.contact{:href => "mailto:mail@michieldegraaf.com"} Email
+
     %footer{:role => "contentinfo"}
       .container
         %p
