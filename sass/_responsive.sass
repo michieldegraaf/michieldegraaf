@@ -14,3 +14,46 @@
 
   header[role="banner"] .container
     margin: $spacer-4 auto
+
+  nav[role="navigation"]
+    top: 0
+    left: 0
+    right: 0
+    height: 64px
+    background: $purple
+    z-index: 1000
+
+    label
+      width: 74px
+      height: 64px
+
+      span,
+      span:before,
+      span:after
+        left: 25px
+        margin-left: 0
+        top: 25px
+        width: 24px
+
+      span:before
+        left: 0
+        top: 6px
+
+      span:after
+        left: 0
+        top: 12px
+
+    input ~ ul
+      top: 0
+
+    ul
+      float: none
+
+      li
+        margin: 0
+
+        a
+          padding-left: 25px
+          color: $pink
+          background: $purple
+          border-top: 1px solid rgba(255,255,255,.1)
