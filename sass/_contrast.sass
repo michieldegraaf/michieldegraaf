@@ -6,6 +6,8 @@ body.fart
   color: $color-c-2
   +mono
   font-weight: 400
+  animation: crt 5ms infinite
+  text-shadow: 0 0 1px $color-c-2, 1px 1px 1px blue, -1px -1px 1px red
 
   &:after
     position: fixed
@@ -13,7 +15,10 @@ body.fart
     right: 0
     bottom: 0
     left: 0
+    z-index: -1
+    content: ""
     background-image: linear-gradient(to bottom, transparent 0px, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 2px * 2)
+    box-shadow: inset 0 0 10em rgba(0,0,0,.5), inset 0 0 2em rgba(0,0,0,.1)
     background-size: 100% 2px * 2
 
   h2,h3,h4
@@ -64,20 +69,15 @@ body.fart
       animation: distort 5s infinite, blur 30ms infinite, flick 50ms infinite, jump 50ms infinite
       filter: blur(3px)
 
-body.fart
-  background: $color-c-1
-  animation: crt 5ms infinite
-  text-shadow: 0 0 1px $color-c-2, 1px 1px 1px blue, -1px -1px 1px red
+  nav[role="navigation"]
+    filter: blur(3px)
 
-  &:after
-    box-shadow: inset 0 0 10em rgba(0,0,0,.5), inset 0 0 2em rgba(0,0,0,.1)
-    position: fixed
-    top: 0
-    left: 0
-    bottom: 0
-    right: 0
-    z-index: -1
-    content: ""
+    label
+      span,
+      span:before,
+      span:after
+        opacity: .6
+        background: $color-c-2
 
   @keyframes crt
     28%
