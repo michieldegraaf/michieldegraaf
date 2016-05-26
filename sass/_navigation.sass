@@ -6,6 +6,7 @@ nav[role="navigation"]
   position: fixed
   top: 20px
   left: 20px
+  z-index: 1000
 
   label
     display: block
@@ -26,15 +27,15 @@ nav[role="navigation"]
       display: block
       height: 2px
       width: 18px
-      background: $pink
+      background: $text
       border-radius: 2px
       content: ""
 
     span:before
-      top: 6px
+      top: 5px
 
     span:after
-      top: 12px
+      top: 10px
 
   input
     display: none
@@ -61,9 +62,6 @@ nav[role="navigation"]
     float: left
     z-index: 1000
     backface-visibility: hidden
-    -webkit-backface-visibility: hidden
-    -moz-backface-visibility: hidden
-    -ms-backface-visibility: hidden
 
     li
       display: block
@@ -72,9 +70,55 @@ nav[role="navigation"]
       a
         display: block
         padding: 8px 15px
-        color: rgba($pink, .5)
+        color: $text
+        +font-size(13)
         border: 0 none
         z-index: 900
 
         &:hover
-          color: rgba($pink, 1)
+          opacity: .5
+
+@media screen and (max-width: 600px)
+
+  nav[role="navigation"]
+    top: 0
+    left: 0
+    right: 0
+    height: 64px
+    background: #fff
+    z-index: 1000
+
+    label
+      width: 74px
+      height: 64px
+
+      span,
+      span:before,
+      span:after
+        left: 25px
+        margin-left: 0
+        top: 25px
+        width: 24px
+
+      span:before
+        left: 0
+        top: 6px
+
+      span:after
+        left: 0
+        top: 12px
+
+    input ~ ul
+      top: 0
+
+    ul
+      float: none
+
+      li
+        margin: 0
+
+        a
+          padding-left: 25px
+          color: $color-2
+          background: $color-1
+          border-top: 1px solid rgba(255,255,255,.1)

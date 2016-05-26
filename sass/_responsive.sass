@@ -1,59 +1,58 @@
 // =Responsive
 // ----------------------------------------------
 
-@media screen and (max-width: 1000px)
-  .container
-    width: 70%
-    margin-left: 15%
-
-@media screen and (max-width: 600px)
+@media screen and (max-width: 1200px)
   .container
     width: auto
+    padding: 0 50px
+
+  header[role="banner"] p
+    width: 100%
+
+@media screen and (max-width: 900px)
+  .container
+    width: auto
+    padding: 0 50px
+
+  header[role="banner"] figure,
+  .content h2
+    padding-right: 40px
+
+@media screen and (max-width: 600px)
+
+  header[role="banner"] figure,
+  .content h2
+    padding-right: 0
+
+  .container
     margin: $spacer-8 auto
     padding: 0 25px
 
-  header[role="banner"] .container
-    margin: $spacer-4 auto
-
-  nav[role="navigation"]
-    top: 0
-    left: 0
-    right: 0
-    height: 64px
-    background: $purple
-    z-index: 1000
-
-    label
-      width: 74px
-      height: 64px
-
-      span,
-      span:before,
-      span:after
-        left: 25px
-        margin-left: 0
-        top: 25px
-        width: 24px
-
-      span:before
-        left: 0
-        top: 6px
-
-      span:after
-        left: 0
-        top: 12px
-
-    input ~ ul
-      top: 0
-
-    ul
+    .col-1,
+    .col-2
       float: none
+      width: auto
 
+    .col-1
+      h2
+        margin-bottom: 20px
+        text-align: left
+
+  .content
+    ul
       li
-        margin: 0
+        span
+          display: none
 
-        a
-          padding-left: 25px
-          color: $pink
-          background: $purple
-          border-top: 1px solid rgba(255,255,255,.1)
+  header[role="banner"]
+    h1
+      margin-bottom: 20px
+
+    .container
+      margin: $spacer-8 auto
+
+    figure .logo
+      float: none
+      width: 33px
+      height: 24px
+      margin-bottom: 25px

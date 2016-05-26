@@ -2,35 +2,54 @@
 // ----------------------------------------------
 
 .container
-  width: 50%
-  margin: $spacer-4 0 $spacer-4 20%
+  overflow: hidden
+  width: auto
+  margin: $spacer-4 0 $spacer-4
+  padding: 0 80px
 
   p, ul
-    +font-size(15)
+    +font-size(13)
     font-weight: 300
 
+  .col-1
+    float: left
+    width: 20%
+
+  .col-2
+    float: right
+    width: 80%
+
 .content
-  p, ul
-    margin-top: $spacer-16 / 2
+  overflow: hidden
+
+  p
+    margin-bottom: $spacer-16 / 2
 
   ul
-    li:before
-      content: "-"
-      display: inline-block
-      margin-right: 10px
+    li
+      &:before
+        content: "-"
+        display: inline-block
+        margin-right: 10px
+
+      &:hover
+        span
+          opacity: .3
+          transform: translateX(0)
+
+      span
+        display: inline-block
+        margin-left: 10px
+        opacity: 0
+        transform: translateX(10px)
 
   h2
-    span
-      display: inline-block
-      margin-left: 5px
-      +font-size(12)
-      cursor: progress
-      opacity: .25
+    padding-right: $spacer-6
+    text-align: right
 
 header[role="banner"]
   position: relative
   overflow: hidden
-  background: $purple
   border-bottom: 1px solid transparent
 
   .container
@@ -42,58 +61,31 @@ header[role="banner"]
 
   figure
     overflow: hidden
-    margin-bottom: $spacer-8
+    padding-right: $spacer-6
 
     .logo
       display: block
-      float: left
+      float: right
       width: 44px
       height: 32px
-      fill: $pink
+      fill: $text
 
       &:hover
         cursor: help
+        fill: $color-c-1
 
   h1
-    color: $pink
-    +font-size(43)
-    line-height: 120%
+    +font-size(13)
+    color: $text
+    line-height: 140%
 
     span
       display: block
       opacity: .6
 
   p
-    +font-size(17)
-    color: $pink
-    font-weight: 200
-
-    a
-      color: $pink
-      border-color: $pink
-
-      &:hover
-        border-color: transparent
+    width: 70%
+    +font-size(13)
 
 footer[role="contentinfo"]
   overflow: hidden
-
-  p
-    font-size: smaller
-
-footer[role="contentinfo"],
-.content ul li span,
-small
-  opacity: .5
-  +transition(opacity, .25s)
-
-  &:hover
-    opacity: .75
-
-.just
-  position: fixed
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  opacity: 0
