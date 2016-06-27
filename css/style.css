@@ -18,14 +18,15 @@ button, textarea, input {
   box-shadow: none; }
 
 body {
-  font-family: "Input Sans Narrow", "Andale Mono", "source-code-pro", "Lucida Console", Monaco, "Courier New", Courier, monospace;
-  font-weight: 300; }
+  font-family: -apple-system, BlinkMacSystemFont, "acumin-pro", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal; }
 
 h1, h2, h3, h4 {
-  font-family: "Input Sans Narrow", "Andale Mono", "source-code-pro", "Lucida Console", Monaco, "Courier New", Courier, monospace;
-  font-weight: 300;
-  color: #06061d;
-  font-size: 0.8125rem; }
+  font-family: -apple-system, BlinkMacSystemFont, "acumin-pro", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #3b3a3f;
+  font-weight: bold;
+  font-size: 1rem; }
 
 h1 {
   margin-bottom: 50px; }
@@ -35,22 +36,22 @@ h1 {
 
 body {
   font-size: 100%;
-  line-height: 140%;
+  line-height: 180%;
   vertical-align: baseline;
-  color: #73737c;
-  background: white;
+  color: #3b3a3f;
+  background: #F3F2F0;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
 a {
   cursor: pointer;
-  color: #73737c;
+  color: #3b3a3f;
   white-space: nowrap;
   text-decoration: none;
-  border-bottom: 1px solid #73737c;
+  border-bottom: 1px solid #3b3a3f;
   transition: all 0.15s ease-out; }
   a:hover {
-    color: #4433f1;
+    color: #7d5cd5;
     border-color: transparent; }
 
 .center {
@@ -58,19 +59,21 @@ a {
 
 hr {
   display: block;
-  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
   height: 1px;
-  background: #73737c;
+  background: #3b3a3f;
+  clear: both;
   opacity: 0.2; }
 
 .container {
-  overflow: hidden;
-  width: auto;
-  margin: 100px 0 100px;
+  overflow-y: hidden;
+  max-width: 840px;
+  margin: 100px auto;
   padding: 0 80px; }
   .container p, .container ul {
-    font-size: 0.8125rem;
-    font-weight: 300; }
+    font-size: 1rem;
+    font-weight: 400; }
   .container .col-1 {
     float: left;
     width: 20%; }
@@ -94,9 +97,6 @@ hr {
     margin-left: 10px;
     opacity: 0;
     transform: translateX(10px); }
-  .content h2 {
-    padding-right: 66.66667px;
-    text-align: right; }
 
 header[role="banner"] {
   position: relative;
@@ -112,71 +112,99 @@ header[role="banner"] {
     padding-right: 66.66667px; }
     header[role="banner"] figure .logo {
       display: block;
-      float: right;
+      float: left;
       width: 44px;
       height: 32px;
-      fill: #06061d; }
+      margin-top: 9px;
+      fill: #3b3a3f; }
       header[role="banner"] figure .logo:hover {
         cursor: help;
-        fill: #4433f1; }
+        fill: #7d5cd5; }
   header[role="banner"] h1 {
-    font-size: 0.8125rem;
-    color: #06061d;
-    line-height: 140%; }
+    font-size: 0.9375rem;
+    color: #3b3a3f;
+    line-height: 160%; }
     header[role="banner"] h1 span {
       display: block;
-      opacity: 0.6; }
+      font-weight: 400; }
   header[role="banner"] p {
-    width: 70%;
-    font-size: 0.8125rem; }
+    font-size: 1rem; }
 
 footer[role="contentinfo"] {
   overflow: hidden; }
 
-header[role="banner"] figure,
+header[role="banner"] figure {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fadeInRight 0.8s 0.5s 1 forwards ease-in-out; }
+
 header[role="banner"] h1,
-header[role="banner"] p,
+header[role="banner"] p {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 0.8s 0.8s 1 forwards ease-in-out; }
+
 section[role="main"],
 footer[role="contentinfo"] {
   opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeIn 0.6s 0.5s 1 forwards ease-in-out; }
-
-header[role="banner"] figure {
-  animation-delay: 0.8s; }
-
-header[role="banner"] h1 {
-  animation-delay: 1s; }
-
-header[role="banner"] p {
-  animation-delay: 1.2s; }
-
-section[role="main"] {
-  animation-delay: 1.4s; }
-
-footer[role="contentinfo"] {
-  animation-delay: 1.6s; }
+  animation: fadeIn 1s 1s 1 forwards ease-in-out; }
 
 @-webkit-keyframes fadeIn {
   0% {
-    transform: translateY(-20px);
     opacity: 0; }
   100% {
-    transform: translateY(0);
     opacity: 1; } }
 @-moz-keyframes fadeIn {
   0% {
-    transform: translateY(-20px);
     opacity: 0; }
   100% {
-    transform: translateY(0);
     opacity: 1; } }
 @keyframes fadeIn {
   0% {
-    transform: translateY(-20px);
     opacity: 0; }
   100% {
-    transform: translateY(0);
+    opacity: 1; } }
+@-webkit-keyframes fadeInLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+@-moz-keyframes fadeInLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+@-webkit-keyframes fadeInRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+@-moz-keyframes fadeInRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
     opacity: 1; } }
 @media screen and (max-width: 1200px) {
   .container {
@@ -185,7 +213,7 @@ footer[role="contentinfo"] {
 
   header[role="banner"] p {
     width: 100%; } }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
   .container {
     width: auto;
     padding: 0 50px; }
@@ -222,21 +250,21 @@ footer[role="contentinfo"] {
     height: 24px;
     margin-bottom: 25px; } }
 body.contrast {
-  background: #4433f1;
-  color: #fff; }
+  background: #f0ffe1;
+  color: #7d5cd5; }
   body.contrast h1, body.contrast h2, body.contrast h3, body.contrast h4 {
-    color: #fff; }
+    color: #7d5cd5; }
   body.contrast a {
-    color: #fff !important;
-    border-color: rgba(255, 255, 255, 0.7) !important; }
+    color: #7d5cd5;
+    border-color: rgba(125, 92, 213, 0.7) !important; }
     body.contrast a:hover {
       opacity: 0.5;
       border-color: transparent !important; }
   body.contrast hr {
-    background: rgba(255, 255, 255, 0.4); }
+    background: rgba(125, 92, 213, 0.4); }
   body.contrast header[role="banner"] .logo {
-    fill: #fff; }
+    fill: #7d5cd5; }
   body.contrast nav[role="navigation"] label span,
   body.contrast nav[role="navigation"] label span:before,
   body.contrast nav[role="navigation"] label span:after {
-    background: #fff; }
+    background: #7d5cd5; }

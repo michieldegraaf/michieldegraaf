@@ -4,37 +4,49 @@
 // =Animations
 // --------------------------
 
-header[role="banner"] figure,
+header[role="banner"] figure
+  opacity: 0
+  transform: translateX(20px)
+  animation: fadeInRight .8s .5s 1 forwards ease-in-out
+
 header[role="banner"] h1,
-header[role="banner"] p,
+header[role="banner"] p
+  opacity: 0
+  transform: translateX(-20px)
+  animation: fadeInLeft .8s .8s 1 forwards ease-in-out
+
 section[role="main"],
 footer[role="contentinfo"]
   opacity: 0
-  transform: translateY(-20px)
-  animation: fadeIn .6s .5s 1 forwards ease-in-out
-
-header[role="banner"] figure
-  animation-delay: .8s
-
-header[role="banner"] h1
-  animation-delay: 1s
-
-header[role="banner"] p
-  animation-delay: 1.2s
-
-section[role="main"]
-  animation-delay: 1.4s
-
-footer[role="contentinfo"]
-  animation-delay: 1.6s
+  animation: fadeIn 1s 1s 1 forwards ease-in-out
 
 // Keyframes - FadeIn
 // --------------------------
 
 +keyframes(fadeIn)
   0%
-    transform: translateY(-20px)
     opacity: 0
   100%
-    transform: translateY(0)
+    opacity: 1
+
+// Keyframes - FadeInLeft
+// --------------------------
+
++keyframes(fadeInLeft)
+  0%
+    transform: translateX(-20px)
+    opacity: 0
+  100%
+    transform: translateX(0)
+    opacity: 1
+
+// Keyframes - FadeInRight
+// --------------------------
+
++keyframes(fadeInRight)
+  0%
+    transform: translateX(20px)
+    opacity: 0
+  100%
+    transform: translateX(0)
     opacity: 1

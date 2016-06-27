@@ -2,14 +2,14 @@
 // ----------------------------------------------
 
 .container
-  overflow: hidden
-  width: auto
-  margin: $spacer-4 0 $spacer-4
+  overflow-y: hidden
+  max-width: 840px
+  margin: $spacer-4 auto
   padding: 0 80px
 
   p, ul
-    +font-size(13)
-    font-weight: 300
+    +font-size(16)
+    font-weight: 400
 
   .col-1
     float: left
@@ -43,10 +43,6 @@
         opacity: 0
         transform: translateX(10px)
 
-  h2
-    padding-right: $spacer-6
-    text-align: right
-
 header[role="banner"]
   position: relative
   overflow: hidden
@@ -65,27 +61,27 @@ header[role="banner"]
 
     .logo
       display: block
-      float: right
+      float: left
       width: 44px
       height: 32px
+      margin-top: 9px
       fill: $text
 
       &:hover
         cursor: help
-        fill: $color-c-1
+        fill: $color-c-2
 
   h1
-    +font-size(13)
+    +font-size(15)
     color: $text
-    line-height: 140%
+    line-height: 160%
 
     span
       display: block
-      opacity: .6
+      font-weight: 400
 
   p
-    width: 70%
-    +font-size(13)
+    +font-size(16)
 
 footer[role="contentinfo"]
   overflow: hidden

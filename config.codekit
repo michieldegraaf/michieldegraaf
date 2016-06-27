@@ -24,20 +24,9 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 448,
+		"initialSize": 4020,
 		"inputAbbreviatedPath": "\/img\/apple-touch-icon.png",
 		"outputAbbreviatedPath": "\/img\/apple-touch-icon.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/michieldegraaf-head.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 365810,
-		"inputAbbreviatedPath": "\/img\/michieldegraaf-head.jpg",
-		"outputAbbreviatedPath": "\/img\/michieldegraaf-head.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

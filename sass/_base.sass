@@ -5,12 +5,11 @@
   +transition(all, .2s)
 
 body
-  font:
-    size: 100%
-  line-height: 140%
+  font-size: 100%
+  line-height: 180%
   vertical-align: baseline
-  color: $text-light
-  background: white
+  color: $text
+  background: #F3F2F0
   -webkit-font-smoothing: antialiased
   text-rendering: optimizeLegibility
 
@@ -19,11 +18,11 @@ a
   color: $text-light
   white-space: nowrap
   text-decoration: none
-  border-bottom: 1px solid $text-light
+  border-bottom: 1px solid $text
   +transition(all, .15s)
 
   &:hover
-    color: $color-c-1
+    color: $color-c-2
     border-color: transparent
 
 .center
@@ -31,7 +30,9 @@ a
 
 hr
   display: block
-  width: 100%
+  max-width: 840px
+  margin: 0 auto
   height: 1px
-  background: $text-light
+  background: $text
+  clear: both
   opacity: .2
