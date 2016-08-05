@@ -42,6 +42,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/michieldegraaf-work-brewbot.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9708,
+		"inputAbbreviatedPath": "\/img\/michieldegraaf-work-brewbot.png",
+		"outputAbbreviatedPath": "\/img\/michieldegraaf-work-brewbot.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/michieldegraaf-work-dubsmash.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11414,
+		"inputAbbreviatedPath": "\/img\/michieldegraaf-work-dubsmash.png",
+		"outputAbbreviatedPath": "\/img\/michieldegraaf-work-dubsmash.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/michieldegraaf-work-producthunt.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9702,
+		"inputAbbreviatedPath": "\/img\/michieldegraaf-work-producthunt.png",
+		"outputAbbreviatedPath": "\/img\/michieldegraaf-work-producthunt.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.haml": {
 		"escapeHTMLCharacters": 0,
 		"fileType": 256,

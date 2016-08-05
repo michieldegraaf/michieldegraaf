@@ -3,7 +3,7 @@
 
 .container
   overflow-y: hidden
-  max-width: 840px
+  max-width: $sitewidth
   margin: $spacer-4 auto
   padding: 0 80px
 
@@ -27,10 +27,6 @@
 
   ul
     li
-      &:before
-        content: "-"
-        display: inline-block
-        margin-right: 10px
 
       &:hover
         span
@@ -52,8 +48,8 @@ header[role="banner"]
     position: relative
     z-index: 10
     margin:
-      top: $spacer-2
-      bottom: $spacer-2
+      top: $spacer-3
+      bottom: $spacer-4
 
   figure
     overflow: hidden
@@ -65,15 +61,14 @@ header[role="banner"]
       width: 44px
       height: 32px
       margin-top: 9px
-      fill: $text
+      fill: $secondary
 
       &:hover
         cursor: help
-        fill: $color-c-2
+        fill: red
 
   h1
-    +font-size(15)
-    color: $text
+    color: $secondary
     line-height: 160%
 
     span
@@ -83,5 +78,39 @@ header[role="banner"]
   p
     +font-size(16)
 
+.project-tiles
+  overflow: hidden
+  margin-top: $spacer-6
+
+  li
+    float: left
+    width: 30%
+    position: relative
+
+    &:nth-child(1),
+    &:nth-child(2)
+      margin-right: 5%
+
+    span
+      display: none
+
+    img
+      display: block
+      width: 100%
+
+.project-sides
+  overflow: hidden
+
+  li
+    float: left
+    width: 33.33%
+
 footer[role="contentinfo"]
   overflow: hidden
+
+  .container
+    margin: $spacer-6 auto
+
+  p
+    +font-size(13)
+    opacity: .5

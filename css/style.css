@@ -39,7 +39,7 @@ body {
   line-height: 180%;
   vertical-align: baseline;
   color: #3b3a3f;
-  background: #F3F2F0;
+  background: #FEF7F1;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
@@ -51,7 +51,7 @@ a {
   border-bottom: 1px solid #3b3a3f;
   transition: all 0.15s ease-out; }
   a:hover {
-    color: #7d5cd5;
+    color: #3b3a3f;
     border-color: transparent; }
 
 .center {
@@ -59,7 +59,7 @@ a {
 
 hr {
   display: block;
-  max-width: 840px;
+  max-width: 980px;
   margin: 0 auto;
   height: 1px;
   background: #3b3a3f;
@@ -68,7 +68,7 @@ hr {
 
 .container {
   overflow-y: hidden;
-  max-width: 840px;
+  max-width: 980px;
   margin: 100px auto;
   padding: 0 80px; }
   .container p, .container ul {
@@ -85,10 +85,6 @@ hr {
   overflow: hidden; }
   .content p {
     margin-bottom: 12.5px; }
-  .content ul li:before {
-    content: "-";
-    display: inline-block;
-    margin-right: 10px; }
   .content ul li:hover span {
     opacity: 0.3;
     transform: translateX(0); }
@@ -105,8 +101,8 @@ header[role="banner"] {
   header[role="banner"] .container {
     position: relative;
     z-index: 10;
-    margin-top: 200px;
-    margin-bottom: 200px; }
+    margin-top: 133.33333px;
+    margin-bottom: 100px; }
   header[role="banner"] figure {
     overflow: hidden;
     padding-right: 66.66667px; }
@@ -119,9 +115,8 @@ header[role="banner"] {
       fill: #3b3a3f; }
       header[role="banner"] figure .logo:hover {
         cursor: help;
-        fill: #7d5cd5; }
+        fill: red; }
   header[role="banner"] h1 {
-    font-size: 0.9375rem;
     color: #3b3a3f;
     line-height: 160%; }
     header[role="banner"] h1 span {
@@ -130,8 +125,34 @@ header[role="banner"] {
   header[role="banner"] p {
     font-size: 1rem; }
 
+.project-tiles {
+  overflow: hidden;
+  margin-top: 66.66667px; }
+  .project-tiles li {
+    float: left;
+    width: 30%;
+    position: relative; }
+    .project-tiles li:nth-child(1), .project-tiles li:nth-child(2) {
+      margin-right: 5%; }
+    .project-tiles li span {
+      display: none; }
+    .project-tiles li img {
+      display: block;
+      width: 100%; }
+
+.project-sides {
+  overflow: hidden; }
+  .project-sides li {
+    float: left;
+    width: 33.33%; }
+
 footer[role="contentinfo"] {
   overflow: hidden; }
+  footer[role="contentinfo"] .container {
+    margin: 66.66667px auto; }
+  footer[role="contentinfo"] p {
+    font-size: 0.8125rem;
+    opacity: 0.5; }
 
 header[role="banner"] figure {
   opacity: 0;
@@ -206,14 +227,7 @@ footer[role="contentinfo"] {
   100% {
     transform: translateX(0);
     opacity: 1; } }
-@media screen and (max-width: 1200px) {
-  .container {
-    width: auto;
-    padding: 0 50px; }
-
-  header[role="banner"] p {
-    width: 100%; } }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1060px) {
   .container {
     width: auto;
     padding: 0 50px; }
@@ -250,21 +264,21 @@ footer[role="contentinfo"] {
     height: 24px;
     margin-bottom: 25px; } }
 body.contrast {
-  background: #f0ffe1;
-  color: #7d5cd5; }
+  background: #3b3a3f;
+  color: white; }
   body.contrast h1, body.contrast h2, body.contrast h3, body.contrast h4 {
-    color: #7d5cd5; }
+    color: white; }
   body.contrast a {
-    color: #7d5cd5;
-    border-color: rgba(125, 92, 213, 0.7) !important; }
+    color: white;
+    border-color: rgba(255, 255, 255, 0.7) !important; }
     body.contrast a:hover {
       opacity: 0.5;
       border-color: transparent !important; }
   body.contrast hr {
-    background: rgba(125, 92, 213, 0.4); }
+    background: rgba(255, 255, 255, 0.4); }
   body.contrast header[role="banner"] .logo {
-    fill: #7d5cd5; }
+    fill: white; }
   body.contrast nav[role="navigation"] label span,
   body.contrast nav[role="navigation"] label span:before,
   body.contrast nav[role="navigation"] label span:after {
-    background: #7d5cd5; }
+    background: white; }
