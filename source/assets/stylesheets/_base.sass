@@ -18,21 +18,20 @@ a
   color: $secondary
   white-space: nowrap
   text-decoration: none
-  border-bottom: 1px solid $secondary
   +transition(all, .15s)
 
   &:hover
-    color: $secondary
     border-color: transparent
+
+  &.link-one,
+  &.link-two
+    display: inline-block
+
+  &.link-one
+    color: $highlight
+
+  &.link-two
+    color: $accent
 
 .center
   text-align: center
-
-hr
-  display: block
-  max-width: $sitewidth
-  margin: 0 auto
-  height: 1px
-  background: $secondary
-  clear: both
-  opacity: .2
