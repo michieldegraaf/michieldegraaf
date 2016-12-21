@@ -1,0 +1,59 @@
+// =Base
+// ----------------------------------------------
+
+*
+  +transition(all, .2s)
+
+body
+  font-size: 100%
+  line-height: 180%
+  vertical-align: baseline
+  color: $secondary
+  background: $primary
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
+a
+  cursor: pointer
+  color: $secondary
+  white-space: nowrap
+  text-decoration: none
+  +transition(all, .15s)
+
+  &:hover
+    border-color: transparent
+
+  &.link-one,
+  &.link-two
+    display: inline-block
+
+    span
+      display: inline-block
+      width: 16px
+      height: 26px
+      padding-left: 8px
+      text-indent: -999px
+      background:
+        position: center center
+        repeat: no-repeat
+
+    &:hover
+      transform: translateX(4px)
+
+      span
+        transform: translateX(2px)
+
+  &.link-one
+    color: $highlight
+
+    span
+      background-image: url(../images/icon-arrow.svg)
+
+  &.link-two
+    color: $accent
+
+    span
+      background-image: url(../images/icon-heart.svg)
+
+.center
+  text-align: center

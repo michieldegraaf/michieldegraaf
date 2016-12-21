@@ -1,20 +1,26 @@
-require 'compass/import-once/activate'
-# Require any additional compass plugins here.
+activate :directory_indexes
+activate :autoprefixer
 
-# Set this to the root of your project when deployed:
-http_path = "/"
-css_dir = "css"
-sass_dir = "sass"
-images_dir = "img"
-javascripts_dir = "scripts"
-fonts_dir = "fonts"
+set :relative_links, true
+set :css_dir, "assets/stylesheets"
+set :js_dir, "assets/javascripts"
+set :images_dir, "assets/images"
+set :fonts_dir, "assets/fonts"
+set :layout, "layouts/application"
 
-output_style = :nested
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
 
-# To enable relative paths to assets via compass helper functions. Uncomment:
-# relative_assets = true
+configure :development do
+  activate :livereload
+end
 
-line_comments = false
-color_output = false
+configure :build do
+  activate :relative_assets
+end
 
-preferred_syntax = :scss
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.deploy_method = :git
+end

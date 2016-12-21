@@ -1,0 +1,66 @@
+// =Layout
+// ----------------------------------------------
+
+.container
+  overflow-y: hidden
+  margin: 0 auto
+  padding: 0 120px
+
+  p, ul
+    +font-size(16)
+    font-weight: 400
+    line-height: 160%
+
+  p
+    margin-bottom: 24px
+
+header[role="banner"]
+  position: relative
+  overflow: hidden
+  margin-top: 120px
+
+  h1
+    float: left
+    color: $secondary
+    line-height: 140%
+
+    span
+      display: block
+      font-weight: 300
+
+  .logo
+    display: block
+    float: right
+    margin-top: 8px
+    width: 86px
+    height: 58px
+    fill: $secondary
+
+    &:hover
+      cursor: progress
+      fill: $highlight
+
+.intro
+  margin-top: 120px
+  max-width: 50%
+
+footer
+  overflow: hidden
+  position: fixed
+  right: 0
+  bottom: 40px
+  left: 0
+
+  ul
+    overflow: hidden
+
+    li
+      display: block
+      float: left
+      margin-right: 40px
+
+      a
+        opacity: .5
+
+        &:hover
+          opacity: 1

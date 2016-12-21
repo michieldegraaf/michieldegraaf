@@ -2,10 +2,13 @@
 // ----------------------------------------------
 
 body.contrast
-  background: $secondary
+  +mono
+  background: black
   color: white
 
   h1,h2,h3,h4
+    +mono
+    font-weight: bold
     color: white
 
   a
@@ -13,13 +16,14 @@ body.contrast
     border-color: rgba(white, .7) !important
 
     &:hover
-      opacity: .5
       border-color: transparent !important
 
   hr
-    background: rgba(white, .4)
+    background: transparent
 
-  header[role="banner"]
+  header[role="banner"],
+  footer[role="contentinfo"]
+    background: black
 
     .logo
       fill: white
