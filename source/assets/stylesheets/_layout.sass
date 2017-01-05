@@ -3,8 +3,8 @@
 
 .container
   overflow-y: hidden
+  max-width: $sitewidth
   margin: 0 auto
-  padding: 0 120px
 
   p, ul
     +font-size(16)
@@ -15,6 +15,9 @@
     margin-bottom: 24px
 
 header[role="banner"]
+  overflow: hidden
+
+.navbar
   position: relative
   overflow: hidden
   margin-top: 120px
@@ -34,21 +37,24 @@ header[role="banner"]
     margin-top: 8px
     width: 86px
     height: 58px
-    fill: $secondary
+    mask: url(../images/logo.svg) no-repeat center center
+    background-color: $secondary
 
     &:hover
       cursor: progress
-      fill: $highlight
 
 .intro
-  margin-top: 120px
-  max-width: 50%
+  margin:
+    top: 120px
+
+  p
+    max-width: 640px
 
 footer
   overflow: hidden
   position: fixed
   right: 0
-  bottom: 40px
+  bottom: 64px
   left: 0
 
   ul
@@ -59,8 +65,12 @@ footer
       float: left
       margin-right: 40px
 
+      &:nth-child(4)
+        margin: 0 !important
+
       a
-        opacity: .5
+        color: $grey
+        opacity: .4
 
         &:hover
           opacity: 1
