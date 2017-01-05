@@ -2,35 +2,31 @@
 // ----------------------------------------------
 
 body.contrast
-  +mono
-  background: black
-  color: white
+  color: $primary
+  background: $secondary
 
-  h1,h2,h3,h4
-    +mono
-    font-weight: bold
-    color: white
-
-  a
-    color: white
-    border-color: rgba(white, .7) !important
-
-    &:hover
-      border-color: transparent !important
-
-  hr
-    background: transparent
-
-  header[role="banner"],
-  footer[role="contentinfo"]
-    background: black
+  .navbar
+    h1
+      color: $primary
 
     .logo
-      fill: white
+      background-color: $primary
 
-  nav[role="navigation"]
-    label
-      span,
-      span:before,
-      span:after
-        background: white
+  a
+    &.link-one
+      color: darken($highlight, 14%)
+
+      span
+        background-color: darken($highlight, 14%)
+
+      &:hover
+        color: rgba(darken($highlight, 14%), .5)
+
+        i
+          color: darken($highlight, 14%)
+
+    &.link-two
+      color: darken($accent, 20%)
+
+      &:hover
+        color: $contrast

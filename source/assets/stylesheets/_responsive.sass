@@ -1,15 +1,71 @@
 // =Responsive
 // ----------------------------------------------
 
-@media screen and (max-width: 1060px)
-  .container
-    width: auto
-    padding: 0 50px
+@media screen and (max-height: 670px)
+  footer
+    position: relative
+    bottom: 0
+    margin-top: 80px
+    padding-bottom: 40px
 
-  header[role="banner"] figure,
-  .content h2
-    padding-right: 40px
+@media screen and (max-width: ($sitewidth + 240px))
+  .container
+    margin:
+      left: 120px
+      right: 120px
 
 @media screen and (max-width: 800px)
+  .container
+    margin:
+      left: 80px
+      right: 80px
+
+  .navbar
+    margin-top: 80px
+
+  .intro
+    margin:
+      top: 80px
 
 @media screen and (max-width: 600px)
+  .container
+    margin:
+      left: 40px
+      right: 40px
+
+  .navbar
+    margin-top: 40px
+
+    .logo
+      float: none
+      margin: 0
+
+    h1
+      float: none
+      margin-top: 32px
+
+  .intro
+    margin:
+      top: 40px
+
+  footer
+    position: relative
+    bottom: 0
+    margin-top: 40px
+
+    ul
+      li
+        margin-right: 16px
+
+@media screen and (max-width: 400px)
+  .container
+    margin:
+      left: 32px
+      right: 32px
+
+  .navbar
+    margin-top: 32px
+
+  .intro
+    margin:
+      top: 32px
