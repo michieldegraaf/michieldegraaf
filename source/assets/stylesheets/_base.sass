@@ -6,10 +6,9 @@
 
 body
   font-size: 100%
-  line-height: 180%
   vertical-align: baseline
-  color: $secondary
-  background: $primary
+  color: $primary
+  background: $secondary
   -webkit-font-smoothing: antialiased
   text-rendering: optimizeLegibility
 
@@ -47,23 +46,8 @@ a
     color: $highlight
 
     span
-      mask: url(../images/icon-arrow.svg) no-repeat center center
+      mask: url(../images/icon-eye.svg) no-repeat center center
       background-color: $highlight
-
-    i
-      display: inline-block
-      font-style: normal
-      opacity: .3
-
-    &:hover
-      color: rgba($highlight, .5)
-
-      span
-        opacity: .5
-
-      i
-        opacity: 1
-        color: $secondary
 
   &.link-two
     color: $accent
@@ -72,11 +56,11 @@ a
       mask: url(../images/icon-heart.svg) no-repeat center center
       background-color: $accent
 
-    &:hover
-      color: $contrast
+  &:hover
+    color: $contrast
 
-      span
-        background-color: $contrast
+    span
+      background-color: $contrast
 
 .center
   text-align: center

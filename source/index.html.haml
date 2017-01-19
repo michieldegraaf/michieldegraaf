@@ -2,12 +2,13 @@
 title: Michiel de Graaf - Designer
 ---
 
-%header.navbar{:role => "banner"}
+%header.title{:role => "banner"}
   %section.container
     .logo M
     %h1
       Michiel de Graaf
-      %span Designer
+      %br
+      Designer
 
   %section.intro.container{:role => "main"}
     %p I create interfaces, shape brands and build digital products.
@@ -15,20 +16,90 @@ title: Michiel de Graaf - Designer
       %a.link-one{:href => "#work"}
         View some of my work
         %span &rarr;
-        %i Soon
     %p  I've had the pleasure of working with companies like Airbnb, Product Hunt, Guerilla Games and Karma amongst others. I'm available for freelance projects.
     %p
       %a.link-two{:href => "mailto:mail@michieldegraaf.com"}
         Let's work together
         %span &#9825;
 
-%footer
-  %ul.container
-    %li
-      %a{:href => "http://www.twitter.com/michieldegraaf", :target => "_blank"} Twitter
-    %li
-      %a{:href => "mailto:mail@michieldegraaf.com"} Email
-    %li
-      %a{:href => "http://www.michieldegraaf.com/michieldegraaf-resume.pdf", :target => "_blank"} Resume
-    %li
-      %a{:href => "https://dribbble.com/michieldegraaf", :target => "_blank"} Dribbble
+  %nav{:role => "navigation"}
+    %ul.container
+      %li
+        %a{:href => "#work"} Work
+      %li
+        %a{:href => "#info"} About me
+      %li
+        %a{:href => "http://www.twitter.com/michieldegraaf", :target => "_blank"} Twitter
+      %li.nav-scroll
+        %a{:href => "#work"} View more
+
+%section#work{:role => "main"}
+  .container.case
+    %h2
+      Sideband
+    %p
+      The goal for Sideband is to create the most simple, quick and meaningful podcast experience. Listen with ease and explore the content of each broadcast after listening. Share snippers with friends and fans and explore new content based on what you and your inner circle like.
+    %figure.case-gallery
+
+  .container.case
+    %h2
+      Brewbot
+    %p
+      Description
+    %figure.case-gallery
+
+  .container.case
+    %h2
+      Dubsmash
+    %p
+      Description
+    %figure.case-gallery
+
+  .container.case
+    %h2
+      Product Hunt
+    %p
+      Description
+    %figure.case-gallery
+
+  .container.case
+    %h2
+      Clocks
+    %p
+      Description
+    %figure.case-gallery
+
+%section#info{:role => "contentinfo"}
+  .container
+    %h2
+      Michiel de Graaf
+    %p
+      I'm a Product Designer from the Netherlands.
+      Over the last 8 years I've had the pleasure of working with some great companies on a wide variety of projects for a wide range of users and platforms.
+
+    %ul.contact
+      %li
+        Email: mail@michieldegraaf.com
+      %li
+        Phone: +31 68118 2625
+      %li
+        Location: The Hague, The Netherlands
+      %li
+        Resume
+
+    %ul.social
+      %li
+        %a{:href => "http://www.twitter.com/michieldegraaf", :target => "_blank"} Twitter
+      %li
+        %a{:href => "http://www.instagram.com/michieldegraaf", :target => "_blank"} Instagram
+      %li
+        %a{:href => "http://www.dribbble.com/michieldegraaf", :target => "_blank"} Dribbble
+
+// Sideband
+// Dubsmash
+// Brewbot
+// Product Hunt
+// Clocks
+
+// Side Projects
+// Info

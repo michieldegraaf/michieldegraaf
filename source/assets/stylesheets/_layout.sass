@@ -7,38 +7,40 @@
   margin: 0 auto
 
   p, ul
-    +font-size(16)
+    +font-size(34)
     font-weight: 400
-    line-height: 160%
+    line-height: 120%
 
   p
     margin-bottom: 24px
 
 header[role="banner"]
-  overflow: hidden
-
-.navbar
   position: relative
   overflow: hidden
-  margin-top: 120px
+  color: $primary
+  background: $secondary
+
+.title
+  position: relative
+  overflow: hidden
+  background: -webkit-linear-gradient($primary, #ccc) !important
+  -webkit-background-clip: text !important
+  -webkit-text-fill-color: transparent !important
 
   h1
     float: left
-    color: $secondary
-    line-height: 140%
-
-    span
-      display: block
-      font-weight: 300
+    margin-top: 120px
+    color: $primary
+    line-height: 120%
 
   .logo
     display: block
     float: right
-    margin-top: 8px
+    margin-top: 128px
     width: 86px
     height: 58px
     mask: url(../images/logo.svg) no-repeat center center
-    background-color: $secondary
+    background-color: $primary
 
     &:hover
       cursor: progress
@@ -48,14 +50,10 @@ header[role="banner"]
     top: 120px
 
   p
-    max-width: 640px
+    +font-size(80)
+    font-weight: 600
 
-footer
-  overflow: hidden
-  position: fixed
-  right: 0
-  bottom: 64px
-  left: 0
+nav[role="navigation"]
 
   ul
     overflow: hidden
@@ -65,12 +63,40 @@ footer
       float: left
       margin-right: 40px
 
-      &:nth-child(4)
+      &:nth-child(3)
         margin: 0 !important
 
       a
         color: $grey
-        opacity: .4
+        opacity: .6
 
         &:hover
           opacity: 1
+
+      &.nav-scroll
+        float: right
+        margin: 0
+
+        a
+          display: inline-block
+          width: 32px
+          height: 32px
+          mask: url(../images/icon-arrow.svg) no-repeat center center
+          background-color: $grey
+          text-indent: -9999px
+
+#work,
+#info
+  h2
+    margin-top: 120px
+    +font-size(17)
+
+  p
+    max-width: 640px
+    margin-top: 40px
+    color: $grey
+
+  .case-gallery
+    margin-top: 48px
+    height: 500px
+    background: #eee
