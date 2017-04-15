@@ -1,61 +1,65 @@
 // =Responsive
 // ----------------------------------------------
 
-@media screen and (max-height: 670px)
-  footer
-    position: relative
-    bottom: 0
-    margin-top: 80px
-    padding-bottom: 40px
-
-@media screen and (max-width: ($sitewidth + 240px))
+@media screen and (max-width: 1000px)
   .container
     margin:
-      left: 120px
-      right: 120px
+      left: 100px
+      right: 100px
 
-@media screen and (max-width: 800px)
+  header[role="banner"]
+    margin-top: 100px
+
+    .logo
+      top: 120px
+      right: 100px
+
+    p
+      margin-top: 60px
+
+  .content p,
+  .content ul
+    margin: 60px 0
+
+@media screen and (max-width: 840px)
   .container
     margin:
       left: 80px
       right: 80px
 
-  .title
-    margin-top: 80px
+  header[role="banner"]
+    margin-top: 100px
 
-  .intro
-    margin:
-      top: 80px
+    .logo
+      position: relative
+      width: 86px
+      height: 58px
+      top: 0
+      right: 0
+      mask: url(../images/logo.svg) no-repeat center center
 
-@media screen and (max-width: 600px)
+    p
+      margin-top: 40px
+
+  .content p,
+  .content ul
+    margin: 40px 0
+
+@media screen and (max-width: 660px)
   .container
     margin:
       left: 40px
       right: 40px
 
-  .title
+  header[role="banner"]
     margin-top: 40px
 
-    .logo
-      float: none
-      margin: 0
-
-    h1
-      float: none
+    h1, p
       margin-top: 32px
 
-  .intro
-    margin:
-      top: 40px
-
-  footer
-    position: relative
-    bottom: 0
-    margin-top: 40px
-
-    ul
-      li
-        margin-right: 16px
+  .content p,
+  .content ul
+    margin: 32px 0
 
 @media screen and (max-width: 400px)
   .container
@@ -63,9 +67,12 @@
       left: 32px
       right: 32px
 
-  .title
+  header[role="banner"]
     margin-top: 32px
 
-  .intro
-    margin:
-      top: 32px
+    h1, p
+      margin-top: 32px
+
+  .content p,
+  .content ul
+    margin: 32px 0

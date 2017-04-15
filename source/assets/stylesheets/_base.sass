@@ -1,9 +1,6 @@
 // =Base
 // ----------------------------------------------
 
-*
-  +transition(all, .2s)
-
 body
   font-size: 100%
   vertical-align: baseline
@@ -11,56 +8,21 @@ body
   background: $secondary
   -webkit-font-smoothing: antialiased
   text-rendering: optimizeLegibility
+  +transition(background, .25s)
+  +transition(color, .25s)
 
 a
   cursor: pointer
   color: $primary
   white-space: nowrap
   text-decoration: none
-  +transition(all, .15s)
 
   &:hover
+    color: $accent
     border-color: transparent
 
-  &.link-one,
-  &.link-two
+  &.link
     display: inline-block
-
-    span
-      display: inline-block
-      width: 18px
-      height: 26px
-      padding-left: 8px
-      text-indent: -9999px
-
-    &:hover
-      transform: translateX(4px)
-
-      span
-        transform: translateX(2px)
-
-      i
-        transform: translateX(4px)
-
-  &.link-one
-    color: $highlight
-
-    span
-      mask: url(../images/icon-eye.svg) no-repeat center center
-      background-color: $highlight
-
-  &.link-two
-    color: $accent
-
-    span
-      mask: url(../images/icon-heart.svg) no-repeat center center
-      background-color: $accent
-
-  &:hover
-    color: $contrast
-
-    span
-      background-color: $contrast
 
 .center
   text-align: center

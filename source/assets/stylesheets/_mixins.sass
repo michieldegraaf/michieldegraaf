@@ -1,21 +1,6 @@
 // =Mixins
 // ----------------------------------------------
 
-// =@2x converter
-// --------------------------
-
-=at2x($image_name, $w: auto, $h: auto, $extention: '.png')
-  background:
-    image: url(/images/$image_name + $extention)
-    repeat: no-repeat
-    position: center center
-  $x2img : $image_name + '@2x' + $extention
-
-  @media all and (-webkit-min-device-pixel-ratio : 1.5)
-    background:
-      image: url(/images/$x2img)
-      size: $w $h
-
 // =Transitions
 // --------------------------
 
@@ -37,17 +22,3 @@
     @content
   @keyframes #{$animationName}
     @content
-
-// =Border radius
-// --------------------------
-
-=border-radius($value)
-  -webkit-border-radius: $value
-  -moz-border-radius: $value
-  border-radius: $value
-
-// =Font-size
-// --------------------------
-
-=font-size($value)
-  font-size: ($value / 16) + rem

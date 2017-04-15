@@ -26,15 +26,10 @@
 
     %title= current_page.data.title || "Michiel de Graaf - Designer"
 
-    %script{:src => "https://use.typekit.net/uat0euf.js"}
-    :javascript
-      try{Typekit.load({ async: true });}catch(e){}
-
   %body{class: page_classes}
     = yield
 
     = javascript_include_tag "jquery.min.js"
-    = javascript_include_tag "jquery.easing.1.3.min.js"
     = javascript_include_tag "application"
     :javascript
       var _gaq = _gaq || [];

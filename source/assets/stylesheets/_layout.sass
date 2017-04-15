@@ -2,101 +2,55 @@
 // ----------------------------------------------
 
 .container
-  overflow-y: hidden
   max-width: $sitewidth
-  margin: 0 auto
-
-  p, ul
-    +font-size(34)
-    font-weight: 400
-    line-height: 120%
-
-  p
-    margin-bottom: 24px
+  margin: 0 120px
 
 header[role="banner"]
   position: relative
-  overflow: hidden
-  color: $primary
-  background: $secondary
+  margin-top: 120px
 
-.title
-  position: relative
-  overflow: hidden
-  background: -webkit-linear-gradient($primary, #ccc) !important
-  -webkit-background-clip: text !important
-  -webkit-text-fill-color: transparent !important
+  h1, p
+    margin-top: 80px
+    +font-size
 
-  h1
-    float: left
-    margin-top: 120px
-    color: $primary
-    line-height: 120%
+    span
+      display: block
 
   .logo
+    position: fixed
     display: block
-    float: right
-    margin-top: 128px
-    width: 86px
-    height: 58px
-    mask: url(../images/logo.svg) no-repeat center center
-    background-color: $primary
+    width: 172px
+    height: 116px
+    top: 136px
+    right: 136px
+    mask: url(../images/logo-172x116.svg) no-repeat center center
+    background: $contrast linear-gradient(to right, $contrast 1%, $accent 50%, $accent 51%, $contrast 99%)
+    background-size: 200% auto
+    animation: spin 40s linear infinite
 
     &:hover
       cursor: progress
+      background-color: $accent
 
-.intro
-  margin:
-    top: 120px
+.content
+  background: $primary linear-gradient($primary, #dfdfdf)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
 
-  p
-    +font-size(80)
-    font-weight: 600
+  p,ul
+    margin: 120px 0
+    +font-size
 
-nav[role="navigation"]
+    a
+      transition: 0 none !important
 
-  ul
-    overflow: hidden
-
-    li
-      display: block
-      float: left
-      margin-right: 40px
-
-      &:nth-child(3)
-        margin: 0 !important
-
-      a
-        color: $grey
-        opacity: .6
-
-        &:hover
-          opacity: 1
-
-      &.nav-scroll
-        float: right
-        margin: 0
-
-        a
-          display: inline-block
-          width: 32px
-          height: 32px
-          mask: url(../images/icon-arrow.svg) no-repeat center center
-          background-color: $grey
-          text-indent: -9999px
-
-#work,
-#info
-  h2
-    margin-top: 120px
-    +font-size(17)
-
-  p
-    max-width: 640px
-    margin-top: 40px
-    color: $grey
-
-  .case-gallery
-    margin-top: 48px
-    height: 500px
-    background: #eee
+      &:hover
+        background: $contrast linear-gradient(to right, $contrast 1%, $accent 50%, $accent 51%, $contrast 99%)
+        background-size: 200% auto
+        animation: spin 40s linear infinite
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent

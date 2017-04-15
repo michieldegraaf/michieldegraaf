@@ -2,31 +2,23 @@
 // ----------------------------------------------
 
 body.contrast
-  color: $primary
-  background: $secondary
+  background: $contrast
+  color: $secondary
 
-  .navbar
-    h1
-      color: $primary
+  .logo
+    background: pink
 
-    .logo
-      background-color: $primary
+  .content
+    background: $primary linear-gradient($secondary, $contrast)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
 
-  a
-    &.link-one
-      color: darken($highlight, 14%)
-
-      span
-        background-color: darken($highlight, 14%)
-
-      &:hover
-        color: rgba(darken($highlight, 14%), .5)
-
-        i
-          color: darken($highlight, 14%)
-
-    &.link-two
-      color: darken($accent, 20%)
-
-      &:hover
-        color: $contrast
+    p,ul
+      a:hover
+        background: pink
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
