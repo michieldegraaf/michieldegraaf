@@ -1,34 +1,39 @@
 // =Responsive
 // ----------------------------------------------
 
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1140px)
   .container
-    margin:
-      left: 100px
-      right: 100px
+    margin: 0 96px
 
   header[role="banner"]
-    margin-top: 100px
+    margin-top: 88px
 
     .logo
-      top: 120px
-      right: 100px
+      top: 96px
+      right: 96px
 
-    p
-      margin-top: 60px
-
+  header[role="banner"] h1,
+  header[role="banner"] p,
   .content p,
   .content ul
-    margin: 60px 0
+    font-size: 80px
+
+  .tooltip
+    padding-left: -44px
+
+@media screen and (max-width: 940px)
+  header[role="banner"] h1,
+  header[role="banner"] p,
+  .content p,
+  .content ul
+    font-size: 64px
 
 @media screen and (max-width: 840px)
   .container
-    margin:
-      left: 80px
-      right: 80px
+    margin: 0 80px
 
   header[role="banner"]
-    margin-top: 100px
+    margin-top: 80px
 
     .logo
       position: relative
@@ -41,15 +46,24 @@
     p
       margin-top: 40px
 
+    h1
+      margin-top: 72px
+
+  header[role="banner"] h1,
+  header[role="banner"] p,
   .content p,
   .content ul
-    margin: 40px 0
+    font-size: 56px
+
+  .content
+    margin-top: 56px
+
+    p, ul
+      margin: 40px 0
 
 @media screen and (max-width: 660px)
   .container
-    margin:
-      left: 40px
-      right: 40px
+    margin: 0 40px
 
   header[role="banner"]
     margin-top: 40px
@@ -57,22 +71,33 @@
     h1, p
       margin-top: 32px
 
+  header[role="banner"] h1,
+  header[role="banner"] p,
   .content p,
   .content ul
-    margin: 32px 0
+    font-size: 32px
 
-@media screen and (max-width: 400px)
-  .container
-    margin:
-      left: 32px
-      right: 32px
+  .content
+    margin-top: 24px
 
-  header[role="banner"]
-    margin-top: 32px
+    p, ul
+      margin: 16px 0
 
-    h1, p
-      margin-top: 32px
+  .about
+    .content
+      p, ul
+        letter-spacing: .03em
+        font-size: 20px
 
+@media screen and (max-width: 480px)
+  header[role="banner"] h1,
+  header[role="banner"] p,
   .content p,
   .content ul
-    margin: 32px 0
+    font-size: 24px
+
+  .about
+    .content
+      p, ul
+        letter-spacing: .015em
+        font-size: 16px

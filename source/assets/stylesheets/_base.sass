@@ -8,21 +8,19 @@ body
   background: $secondary
   -webkit-font-smoothing: antialiased
   text-rendering: optimizeLegibility
-  +transition(background, .25s)
-  +transition(color, .25s)
 
 a
   cursor: pointer
   color: $primary
-  white-space: nowrap
   text-decoration: none
-
-  &:hover
-    color: $accent
-    border-color: transparent
+  transition: color .2s
 
   &.link
     display: inline-block
+    color: $accent
+
+    &:hover
+      color: $contrast
 
 .center
   text-align: center

@@ -2,7 +2,7 @@
 // ----------------------------------------------
 
 .container
-  max-width: $sitewidth
+  max-width: 100%
   margin: 0 120px
 
 header[role="banner"]
@@ -10,7 +10,7 @@ header[role="banner"]
   margin-top: 120px
 
   h1, p
-    margin-top: 80px
+    margin-top: 32px
     +font-size
 
     span
@@ -21,11 +21,11 @@ header[role="banner"]
     display: block
     width: 172px
     height: 116px
-    top: 136px
-    right: 136px
+    top: 120px
+    right: 120px
     mask: url(../images/logo-172x116.svg) no-repeat center center
     background: $contrast linear-gradient(to right, $contrast 1%, $accent 50%, $accent 51%, $contrast 99%)
-    background-size: 200% auto
+    background-size: 400% auto
     animation: spin 40s linear infinite
 
     &:hover
@@ -33,24 +33,55 @@ header[role="banner"]
       background-color: $accent
 
 .content
-  background: $primary linear-gradient($primary, #dfdfdf)
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
-  background-clip: text
-  text-fill-color: transparent
+  margin: 80px 0 120px 0
 
   p,ul
-    margin: 120px 0
+    margin: 40px 0
     +font-size
 
-    a
-      transition: 0 none !important
+.links
+  li
+    a:hover
+      color: $primary !important
+    &:nth-child(1)
+      a
+        color: rgba($primary, .6)
+    &:nth-child(2)
+      a
+        color: rgba($primary, .4)
+    &:nth-child(3)
+      a
+        color: rgba($primary, .2)
 
-      &:hover
-        background: $contrast linear-gradient(to right, $contrast 1%, $accent 50%, $accent 51%, $contrast 99%)
-        background-size: 200% auto
-        animation: spin 40s linear infinite
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-        background-clip: text
-        text-fill-color: transparent
+.about
+  .content
+    max-width: 800px
+    line-height: 1.6
+    letter-spacing: .05em
+
+    p, ul
+      font-size: 24px
+      font-weight: 400
+
+  a
+    border-bottom: 2px solid $primary
+    transition: border .2s
+
+    &:hover
+      border-color: transparent
+
+.list-main
+  li
+    display: block
+    position: relative
+
+.tooltip
+  display: none
+  position: absolute
+  width: 400px
+  height: 300px
+  box-shadow: 0 10px 30px rgba(0,0,0,.2)
+
+  img
+    display: block
+    width: 100%
