@@ -2,75 +2,126 @@
 // ----------------------------------------------
 
 .container
-  overflow-y: hidden
   max-width: $sitewidth
   margin: 0 auto
+  padding: 0 80px
 
-  p, ul
-    +font-size(16)
-    font-weight: 400
-    line-height: 160%
-
-  p
-    margin-bottom: 24px
-
-header[role="banner"]
+.logo
+  position: fixed
   overflow: hidden
+  width: $sitewidth
+  top: 80px
 
-.navbar
-  position: relative
-  overflow: hidden
-  margin-top: 120px
-
-  h1
-    float: left
-    color: $secondary
-    line-height: 140%
-
-    span
-      display: block
-      font-weight: 300
-
-  .logo
+  span
     display: block
+    width: 172px
+    height: 116px
     float: right
-    margin-top: 8px
-    width: 86px
-    height: 58px
-    mask: url(../images/logo.svg) no-repeat center center
-    background-color: $secondary
+    mask: url(../images/logo-172x116.svg) no-repeat center center
+    background: $contrast linear-gradient(to right, $contrast 1%, $accent 50%, $accent 51%, $contrast 99%)
+    background-size: 400% auto
+    animation: spin 40s linear infinite
 
     &:hover
       cursor: progress
+      background-color: $accent
 
-.intro
-  margin:
-    top: 120px
+header[role="banner"]
+  position: relative
+  margin-top: 80px
+  max-width: 560px
+
+  h1
+    span
+      display: block
 
   p
-    max-width: 640px
+    margin-top: 48px
 
-footer
+.cases
+  height: auto
   overflow: hidden
-  position: fixed
-  right: 0
-  bottom: 64px
-  left: 0
+  margin-top: -32px
 
-  ul
-    overflow: hidden
+  .case
+    width: 50%
+
+    &:nth-child(1)
+      margin-top: 0
+
+    &:nth-child(2)
+      margin-top: 50%
+
+    &:nth-child(odd)
+      float: right
+      text-align: right
+
+      figure
+        margin-left: 40px
+
+    &:nth-child(even)
+      float: left
+
+      figure
+        margin-right: 40px
+
+    figure
+      display: block
+      max-width: 480px
+
+      img
+        display: block
+        width: 100%
+
+    a
+      display: block
+      margin: 40px 0 180px 0
+      +font-size
+
+      &:hover
+        color: $accent
+
+      strong, i
+        display: block
+        font-style: normal
+
+.about
+  p
+    margin-top: 32px
+
+    &:nth-child(1)
+      margin-top: 0
+
+  .links
+    margin-top: 40px
 
     li
-      display: block
-      float: left
-      margin-right: 40px
-
-      &:nth-child(4)
-        margin: 0 !important
+      margin-top: 4px
 
       a
-        color: $grey
-        opacity: .4
+        border-bottom: 1px solid $primary
 
         &:hover
-          opacity: 1
+          color: $accent !important
+          border-color: transparent !important
+
+        &.link
+          border-color: $accent
+
+      &:nth-child(2)
+        a
+          opacity: .9
+
+      &:nth-child(3)
+        a
+          opacity: .7
+
+      &:nth-child(4)
+        a
+          opacity: .5
+
+footer[role="contentinfo"]
+  padding: 80px 0
+
+  p
+    color: rgba($primary, .3)

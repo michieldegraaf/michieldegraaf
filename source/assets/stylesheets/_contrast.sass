@@ -2,31 +2,12 @@
 // ----------------------------------------------
 
 body.contrast
+  background: $contrast
   color: $primary
-  background: $secondary
 
-  .navbar
-    h1
-      color: $primary
+  .logo
+    span
+      background: $orange
 
-    .logo
-      background-color: $primary
-
-  a
-    &.link-one
-      color: darken($highlight, 14%)
-
-      span
-        background-color: darken($highlight, 14%)
-
-      &:hover
-        color: rgba(darken($highlight, 14%), .5)
-
-        i
-          color: darken($highlight, 14%)
-
-    &.link-two
-      color: darken($accent, 20%)
-
-      &:hover
-        color: $contrast
+  .link
+    color: $orange

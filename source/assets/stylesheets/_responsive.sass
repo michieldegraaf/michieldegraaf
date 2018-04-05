@@ -1,71 +1,66 @@
 // =Responsive
 // ----------------------------------------------
 
-@media screen and (max-height: 670px)
-  footer
+@media screen and (max-width: ($sitewidth + 160px))
+  .logo
     position: relative
-    bottom: 0
-    margin-top: 80px
-    padding-bottom: 40px
+    width: auto
 
-@media screen and (max-width: ($sitewidth + 240px))
-  .container
-    margin:
-      left: 120px
-      right: 120px
+    span
+      position: fixed
+      right: 80px
+      float: none
 
 @media screen and (max-width: 800px)
-  .container
-    margin:
-      left: 80px
-      right: 80px
+  .logo
+    padding-bottom: 80px
 
-  .navbar
+    span
+      position: relative
+      right: 0
+
+  .cases
     margin-top: 80px
 
-  .intro
-    margin:
-      top: 80px
+    .case
+      width: 80%
+      margin: 0 !important
 
-@media screen and (max-width: 600px)
+      figure
+        width: 100%
+        margin: 0 !important
+
+      a
+        margin: 40px 0 80px 0
+
+@media screen and (max-width: 640px)
+  .cases
+    .case
+      width: 100%
+
+@media screen and (max-width: 500px)
+  h1,h2,h3,h4,
+  p, ul,
+  .cases .case a
+    font-size: 18px
+
   .container
-    margin:
-      left: 40px
-      right: 40px
+    padding: 0 40px
 
-  .navbar
+  .logo
+    top: 40px
+    padding-bottom: 40px
+
+    span
+      width: 86px
+      height: 58px
+      mask: url(../images/logo-86x58.svg) no-repeat center center
+
+  header[role="banner"]
     margin-top: 40px
 
-    .logo
-      float: none
-      margin: 0
-
-    h1
-      float: none
+    p
       margin-top: 32px
 
-  .intro
-    margin:
-      top: 40px
-
-  footer
-    position: relative
-    bottom: 0
+  .cases
     margin-top: 40px
-
-    ul
-      li
-        margin-right: 16px
-
-@media screen and (max-width: 400px)
-  .container
-    margin:
-      left: 32px
-      right: 32px
-
-  .navbar
-    margin-top: 32px
-
-  .intro
-    margin:
-      top: 32px

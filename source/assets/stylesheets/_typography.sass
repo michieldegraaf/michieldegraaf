@@ -4,16 +4,25 @@
 =sans-serif
   font:
     family: -apple-system, BlinkMacSystemFont, "acumin-pro", Helvetica Neue, Helvetica, Arial, sans-serif
-    weight: normal
+  letter-spacing: .06em
+
+=font-size
+  font-size: 22px
 
 body
   +sans-serif
+  line-height: 1.5
+  font-weight: 300
 
 h1,h2,h3,h4
   +sans-serif
-  color: $secondary
-  font-weight: 400
-  +font-size(26)
+  +font-size
+  font-weight: 500
+  letter-spacing: .05em
 
-h1
-  letter-spacing: .04em
+strong
+  font-weight: 500
+  letter-spacing: .05em
+
+p, ul
+  +font-size
