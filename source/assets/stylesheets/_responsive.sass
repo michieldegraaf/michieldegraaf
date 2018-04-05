@@ -1,103 +1,66 @@
 // =Responsive
 // ----------------------------------------------
 
-@media screen and (max-width: 1140px)
-  .container
-    margin: 0 96px
+@media screen and (max-width: ($sitewidth + 160px))
+  .logo
+    position: relative
+    width: auto
 
-  header[role="banner"]
-    margin-top: 88px
+    span
+      position: fixed
+      right: 80px
+      float: none
 
-    .logo
-      top: 96px
-      right: 96px
+@media screen and (max-width: 800px)
+  .logo
+    padding-bottom: 80px
 
-  header[role="banner"] h1,
-  header[role="banner"] p,
-  .content p,
-  .content ul
-    font-size: 80px
+    span
+      position: relative
+      right: 0
 
-  .tooltip
-    padding-left: -44px
-
-@media screen and (max-width: 940px)
-  header[role="banner"] h1,
-  header[role="banner"] p,
-  .content p,
-  .content ul
-    font-size: 64px
-
-@media screen and (max-width: 840px)
-  .container
-    margin: 0 80px
-
-  header[role="banner"]
+  .cases
     margin-top: 80px
 
-    .logo
-      position: relative
+    .case
+      width: 80%
+      margin: 0 !important
+
+      figure
+        width: 100%
+        margin: 0 !important
+
+      a
+        margin: 40px 0 80px 0
+
+@media screen and (max-width: 640px)
+  .cases
+    .case
+      width: 100%
+
+@media screen and (max-width: 500px)
+  h1,h2,h3,h4,
+  p, ul,
+  .cases .case a
+    font-size: 18px
+
+  .container
+    padding: 0 40px
+
+  .logo
+    top: 40px
+    padding-bottom: 40px
+
+    span
       width: 86px
       height: 58px
-      top: 0
-      right: 0
-      mask: url(../images/logo.svg) no-repeat center center
-
-    p
-      margin-top: 40px
-
-    h1
-      margin-top: 72px
-
-  header[role="banner"] h1,
-  header[role="banner"] p,
-  .content p,
-  .content ul
-    font-size: 56px
-
-  .content
-    margin-top: 56px
-
-    p, ul
-      margin: 40px 0
-
-@media screen and (max-width: 660px)
-  .container
-    margin: 0 40px
+      mask: url(../images/logo-86x58.svg) no-repeat center center
 
   header[role="banner"]
     margin-top: 40px
 
-    h1, p
+    p
       margin-top: 32px
 
-  header[role="banner"] h1,
-  header[role="banner"] p,
-  .content p,
-  .content ul
-    font-size: 32px
-
-  .content
-    margin-top: 24px
-
-    p, ul
-      margin: 16px 0
-
-  .about
-    .content
-      p, ul
-        letter-spacing: .03em
-        font-size: 20px
-
-@media screen and (max-width: 480px)
-  header[role="banner"] h1,
-  header[role="banner"] p,
-  .content p,
-  .content ul
-    font-size: 24px
-
-  .about
-    .content
-      p, ul
-        letter-spacing: .015em
-        font-size: 16px
+  .cases
+    margin-top: 40px

@@ -2,27 +2,21 @@
 // ----------------------------------------------
 
 .container
-  max-width: 100%
-  margin: 0 120px
+  max-width: $sitewidth
+  margin: 0 auto
+  padding: 0 80px
 
-header[role="banner"]
-  position: relative
-  margin-top: 120px
+.logo
+  position: fixed
+  overflow: hidden
+  width: $sitewidth
+  top: 80px
 
-  h1, p
-    margin-top: 32px
-    +font-size
-
-    span
-      display: block
-
-  .logo
-    position: fixed
+  span
     display: block
     width: 172px
     height: 116px
-    top: 120px
-    right: 120px
+    float: right
     mask: url(../images/logo-172x116.svg) no-repeat center center
     background: $contrast linear-gradient(to right, $contrast 1%, $accent 50%, $accent 51%, $contrast 99%)
     background-size: 400% auto
@@ -32,56 +26,102 @@ header[role="banner"]
       cursor: progress
       background-color: $accent
 
-.content
-  margin: 80px 0 120px 0
+header[role="banner"]
+  position: relative
+  margin-top: 80px
+  max-width: 560px
 
-  p,ul
-    margin: 40px 0
-    +font-size
+  h1
+    span
+      display: block
 
-.links
-  li
-    a:hover
-      color: $primary !important
+  p
+    margin-top: 48px
+
+.cases
+  height: auto
+  overflow: hidden
+  margin-top: -32px
+
+  .case
+    width: 50%
+
     &:nth-child(1)
-      a
-        color: rgba($primary, .6)
+      margin-top: 0
+
     &:nth-child(2)
-      a
-        color: rgba($primary, .4)
-    &:nth-child(3)
-      a
-        color: rgba($primary, .2)
+      margin-top: 50%
+
+    &:nth-child(odd)
+      float: right
+      text-align: right
+
+      figure
+        margin-left: 40px
+
+    &:nth-child(even)
+      float: left
+
+      figure
+        margin-right: 40px
+
+    figure
+      display: block
+      max-width: 480px
+
+      img
+        display: block
+        width: 100%
+
+    a
+      display: block
+      margin: 40px 0 180px 0
+      +font-size
+
+      &:hover
+        color: $accent
+
+      strong, i
+        display: block
+        font-style: normal
 
 .about
-  .content
-    max-width: 800px
-    line-height: 1.6
-    letter-spacing: .05em
+  p
+    margin-top: 32px
 
-    p, ul
-      font-size: 24px
-      font-weight: 400
+    &:nth-child(1)
+      margin-top: 0
 
-  a
-    border-bottom: 2px solid $primary
-    transition: border .2s
+  .links
+    margin-top: 40px
 
-    &:hover
-      border-color: transparent
+    li
+      margin-top: 4px
 
-.list-main
-  li
-    display: block
-    position: relative
+      a
+        border-bottom: 1px solid $primary
 
-.tooltip
-  display: none
-  position: absolute
-  width: 400px
-  height: 300px
-  box-shadow: 0 10px 30px rgba(0,0,0,.2)
+        &:hover
+          color: $accent !important
+          border-color: transparent !important
 
-  img
-    display: block
-    width: 100%
+        &.link
+          border-color: $accent
+
+      &:nth-child(2)
+        a
+          opacity: .9
+
+      &:nth-child(3)
+        a
+          opacity: .7
+
+      &:nth-child(4)
+        a
+          opacity: .5
+
+footer[role="contentinfo"]
+  padding: 80px 0
+
+  p
+    color: rgba($primary, .3)

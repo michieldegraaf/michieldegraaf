@@ -8,16 +8,20 @@ body
   background: $secondary
   -webkit-font-smoothing: antialiased
   text-rendering: optimizeLegibility
+  cursor: url(../images/icon-arrow.svg), auto
 
 a
   cursor: pointer
   color: $primary
   text-decoration: none
   transition: color .2s
+  cursor: url(../images/icon-link.svg), auto
 
   &.link
     display: inline-block
+    font-weight: 500
     color: $accent
+    cursor: url(../images/icon-email.svg), auto
 
     &:hover
       color: $contrast
