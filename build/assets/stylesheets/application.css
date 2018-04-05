@@ -100,7 +100,7 @@ header[role="banner"] {
 .cases {
   height: auto;
   overflow: hidden;
-  margin-top: -32px; }
+  margin-top: 40px; }
   .cases .case {
     width: 50%; }
     .cases .case:nth-child(1) {
@@ -144,7 +144,8 @@ header[role="banner"] {
       border-bottom: 1px solid #fff; }
       .about .links li a:hover {
         color: #aa73ff !important;
-        border-color: transparent !important; }
+        border-color: transparent !important;
+        opacity: 1 !important; }
       .about .links li a.link {
         border-color: #aa73ff; }
     .about .links li:nth-child(2) a {
@@ -174,16 +175,14 @@ footer[role="contentinfo"] {
       position: relative;
       right: 0; }
 
-  .cases {
-    margin-top: 80px; }
-    .cases .case {
-      width: 80%;
+  .cases .case {
+    width: 80%;
+    margin: 0 !important; }
+    .cases .case figure {
+      width: 100%;
       margin: 0 !important; }
-      .cases .case figure {
-        width: 100%;
-        margin: 0 !important; }
-      .cases .case a {
-        margin: 40px 0 80px 0; } }
+    .cases .case a {
+      margin: 40px 0 80px 0; } }
 @media screen and (max-width: 640px) {
   .cases .case {
     width: 100%; } }
