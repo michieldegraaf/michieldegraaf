@@ -6,7 +6,7 @@
 *.sublime-workspace
 
 # Local files
-*.build
+build
 .htaccess
 
 # SASS
