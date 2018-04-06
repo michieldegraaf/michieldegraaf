@@ -41,7 +41,7 @@ header[role="banner"]
 .cases
   height: auto
   overflow: hidden
-  margin-top: 40px
+  margin-top: 80px
 
   .case
     width: 50%
@@ -50,7 +50,7 @@ header[role="banner"]
       margin-top: 0
 
     &:nth-child(2)
-      margin-top: 50%
+      margin-top: 35%
 
     &:nth-child(odd)
       float: right
@@ -86,6 +86,8 @@ header[role="banner"]
         font-style: normal
 
 .about
+  max-width: 800px
+
   p
     margin-top: 32px
 
@@ -99,7 +101,7 @@ header[role="banner"]
       margin-top: 4px
 
       a
-        border-bottom: 1px solid $primary
+        border-bottom: 1px solid rgba(#fff, .6)
 
         &:hover
           color: $accent !important
@@ -107,7 +109,10 @@ header[role="banner"]
           opacity: 1 !important
 
         &.link
-          border-color: $accent
+          border-color: transparent
+
+          &:hover
+            color: $contrast !important
 
       &:nth-child(2)
         a
@@ -125,4 +130,4 @@ footer[role="contentinfo"]
   padding: 80px 0
 
   p
-    color: rgba($primary, .3)
+    color: rgba($primary, .25)
