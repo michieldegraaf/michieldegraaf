@@ -100,13 +100,13 @@ header[role="banner"] {
 .cases {
   height: auto;
   overflow: hidden;
-  margin-top: 40px; }
+  margin-top: 80px; }
   .cases .case {
     width: 50%; }
     .cases .case:nth-child(1) {
       margin-top: 0; }
     .cases .case:nth-child(2) {
-      margin-top: 50%; }
+      margin-top: 38%; }
     .cases .case:nth-child(odd) {
       float: right;
       text-align: right; }
@@ -132,33 +132,37 @@ header[role="banner"] {
         display: block;
         font-style: normal; }
 
-.about p {
-  margin-top: 32px; }
-  .about p:nth-child(1) {
-    margin-top: 0; }
-.about .links {
-  margin-top: 40px; }
-  .about .links li {
-    margin-top: 4px; }
-    .about .links li a {
-      border-bottom: 1px solid #fff; }
-      .about .links li a:hover {
-        color: #aa73ff !important;
-        border-color: transparent !important;
-        opacity: 1 !important; }
-      .about .links li a.link {
-        border-color: #aa73ff; }
-    .about .links li:nth-child(2) a {
-      opacity: 0.9; }
-    .about .links li:nth-child(3) a {
-      opacity: 0.7; }
-    .about .links li:nth-child(4) a {
-      opacity: 0.5; }
+.about {
+  max-width: 800px; }
+  .about p {
+    margin-top: 32px; }
+    .about p:nth-child(1) {
+      margin-top: 0; }
+  .about .links {
+    margin-top: 40px; }
+    .about .links li {
+      margin-top: 4px; }
+      .about .links li a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
+        .about .links li a:hover {
+          color: #aa73ff !important;
+          border-color: transparent !important;
+          opacity: 1 !important; }
+        .about .links li a.link {
+          border-color: transparent; }
+          .about .links li a.link:hover {
+            color: #7724f8 !important; }
+      .about .links li:nth-child(2) a {
+        opacity: 0.9; }
+      .about .links li:nth-child(3) a {
+        opacity: 0.7; }
+      .about .links li:nth-child(4) a {
+        opacity: 0.5; }
 
 footer[role="contentinfo"] {
   padding: 80px 0; }
   footer[role="contentinfo"] p {
-    color: rgba(255, 255, 255, 0.3); }
+    color: rgba(255, 255, 255, 0.25); }
 
 @media screen and (max-width: 1200px) {
   .logo {
@@ -187,6 +191,12 @@ footer[role="contentinfo"] {
   .cases .case {
     width: 100%; } }
 @media screen and (max-width: 500px) {
+  body {
+    letter-spacing: 0.01em; }
+
+  h1, strong {
+    letter-spacing: 0.02em; }
+
   h1, h2, h3, h4,
   p, ul,
   .cases .case a {
