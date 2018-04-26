@@ -2,12 +2,20 @@
 // ----------------------------------------------
 
 body.contrast
-  background: $contrast
-  color: $primary
+  background: $primary
+  color: $secondary
+  cursor: url(../images/icon-arrow-black.svg), auto
 
-  .logo
-    span
-      background: $orange
+  a
+    color: $secondary
+    cursor: url(../images/icon-link-black.svg), auto
 
-  .link
-    color: $orange
+    &:hover
+      color: $contrast
+
+    &.link
+      color: $accent
+      cursor: url(../images/icon-email-black.svg), auto
+
+      &:hover
+        color: $contrast
